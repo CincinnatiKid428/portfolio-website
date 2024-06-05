@@ -1,0 +1,365 @@
+/*  -------------Variable Definitions--------------  */
+:root {
+  --color-background-gradient: #bdd1cc;
+  --color-unvisited-link: #357b70;
+  --color-visited-link: #8a2be2;
+  --color-active-link: #489c79;
+  --color-button-background: #5a5a5a;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-blue: #00f;
+  --color-button-border-bottom: rgba(0, 0, 0, 0.3);
+  --color-grid__item-background: #d3d3d3;
+  --color-grid__item-hover-background: #add8e6;
+  --color-grid__item-hover-text-color: #000080;
+  --color-sky-color-change-0: #83ffff;
+  --color-sky-color-change-50: #e65e03;
+  --color-sky-color-change-100: #03025f;
+  --font-heading-font-weight: 700;
+  --margin-default-value: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*  -------------Body Styling-------------  */
+body {
+  /*  border: 5px solid blue; /* border for debugging  */
+  background: linear-gradient(var(--color-white), var(--color-background-gradient), var(--color-white));
+
+  /*  Lato font from GoogleFonts  */
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+
+  /*  Sets the font size, line height, left margin for body element  */
+  font-size: 16px;
+  line-height: 1.2;
+  margin-left: var(--margin-default-value);
+}
+
+/*  -------------Header Styling-------------  */
+header {
+  /*  border: 5px solid red; /* border for debugging  */
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.page-header {
+  display: flex; /*  flexbox  */
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item {
+  flex: 0 1 200px; /*  flex-grow flex-shrink flex-basis  */
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+/*  -------------Footer Styling-------------  */
+footer {
+  /*  border: 5px solid purple; /* border for debugging  */
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* .social-media {} */
+
+/* -------------Headings Styling------------- */
+h1 {
+  font-size: 28px;
+  font-weight: var(--font-heading-font-weight);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--font-heading-font-weight);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--font-heading-font-weight);
+}
+
+/* -------------Link Styling------------- */
+a {
+  color: var(--color-unvisited-link); /*  Link color - unvisited state  */
+}
+
+a:visited {
+  color: var(--color-visited-link); /*  Visited link color  */
+}
+
+a:hover,
+a:focus {
+  text-decoration: none; /*  Removes underline on a link with mouseover  */
+  color: var(--color-blue);
+}
+
+a:active {
+  color: var(--color-active-link);
+}
+
+/* -------------Button Styling------------- */
+
+/* Borders, colors, font (inherit Lato from body rule set), padding, underline  */
+button,
+.button {
+  border: none;
+  font-family: inherit;
+  background-color: var(--color-button-background);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--color-button-border-bottom);
+  transition-duration: 1s;
+  transition-property: opacity;
+}
+
+@keyframes button-grow {
+  from {
+    transform: scale(1.1, 1.1);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.6; /* 60% opacity */
+  animation: 1s button-grow 1 normal linear;
+}
+
+/* -------------Nav Bar Styling------------- */
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item--active {
+  text-decoration: none; /* Denotes current page has no underline for link in nav menu */
+}
+
+/* -------------Profile Section Styling (index.html)------------- */
+
+.profile {
+  /* border: 5px solid orange; /* border for debugging */
+  text-align: left;
+  max-width: 700px;
+  height: 260px; /* use height of profile__portrait */
+  margin: 0 auto;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.profile-flexbox {
+  /* border: 5px solid brown; /* border for debugging */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-flexbox__item {
+  /* border: 5px solid green; /* border for debugging */
+  margin-bottom: var(--margin-default-value);
+}
+
+.profile-flexbox__item:first-child {
+  margin-top: 20px;
+}
+
+/* -------------Grid Styling (work.html)------------- */
+
+/* START: fallback to inline-block if CSS grid unsupported */
+.grid__item {
+  display: inline-block; /* Will allow grid__item to still display */
+  width: 33%;
+}
+
+/* END: Grid fallback */
+
+@supports (display: grid) {
+  .grid {
+    /* border: 5px solid green; /* border for debugging */
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.grid__item {
+  /* border: 1px solid #000000; /* border for debugging */
+  background-color: var(--color-grid__item-background);
+  padding: 5px;
+  width: auto;
+  min-height: auto;
+  margin: 0;
+  transition: transform 0.2s ease;
+}
+
+.grid__item:hover {
+  background-color: var(--color-grid__item-hover-background);
+  color: var(--color-grid__item-hover-text-color);
+  transform: scale(105%);
+  animation: 0.5s flash 1 normal;
+}
+
+/*
+his flash animation is a modified excerpt from ChatGPT query :
+"I would like to add a hover transition to a grid item in my
+html file that makes the grid item grow slightly land flash."
+*/
+@keyframes flash { /* Reveresed order of opacity so grid__item fades in */
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---------------Responsive Design Section--------------- */
+
+/* For screens up to 500 pixel width (smart phones & tablets) */
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* --------------- Animation Secction --------------- */
+
+.about-picture {
+  display: flex;
+  /* border: 2px solid blue; border used for debugging */
+  justify-content: center;
+  justify-items: center;
+  margin-top: var(--margin-default-value);
+}
+
+/* .about-picture__forest-scene {
+
+} */
+
+/* Sun */
+@keyframes move-sun {
+  from {
+    transform: translate();
+  }
+
+  to {
+    transform: translateY(180px);
+  }
+}
+
+.sun-inner-big,
+.sun-inner-small,
+.sun-border {
+  animation: 10s move-sun infinite alternate ease-in-out;
+}
+
+/* Sky */
+@keyframes sky-color-change { /* Changes color of the sky as sun sets & rises */
+  0% {
+    fill: var(--color-sky-color-change-0);
+  }
+
+  50% {
+    fill: var(--color-sky-color-change-50);
+  }
+
+  100% {
+    fill: var(--color-sky-color-change-100);
+  }
+}
+
+.background {
+  animation: 10s sky-color-change infinite alternate linear;
+}
+
+/* Clouds */
+@keyframes cloud-move-left {
+  from {
+    transform: translateX(-220px);
+  }
+
+  to {
+    transform: translateX(520px);
+  }
+}
+
+@keyframes cloud-move-right {
+  from {
+    transform: translateX(-450px);
+  }
+
+  to {
+    transform: translateX(200px);
+  }
+}
+
+.cloud-left {
+  animation-name: cloud-move-left;
+  animation-direction: normal;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.cloud-right {
+  animation-name: cloud-move-right;
+  animation-direction: normal;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

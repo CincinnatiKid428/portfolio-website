@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon generated using RecraftAI with prompt : 
+         "orange cat face whiskers for favicon" and .ico file created
+         with Favic-O-Matic service using the AI generated image. -->
+    
+    <title>Philip Weaver - Contact</title>
+
+    <!--Normalize CSS stylesheet used to reset browser default CSS rules-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+    <!--Embedding font from Google Fonts below-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="shortcut icon" href="img/favicon-32x32.png">
+</head>
+<body>
+    <!--Header of page with logo and nav bar-->
+    <header class="page-header">
+        <a href="index.html" style="text-decoration: none">
+            <img src="img/header_logo.png" class="page-header__item" alt="Personal logo of Philip Weaver, a text logo with black letters casting shadow and consisting of my name">
+        </a>
+        
+        <nav class="page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
+                </li>
+                <li role="presentation">
+                    <a href="contact.html" role="menuitem" class="navigation-list__item--active">Contact</a>
+                </li>
+                <li role="presentation">
+                    <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!--Content pane-->
+    <div class="contact-me">
+
+        <h1 role="heading">Contact Information</h1>
+        <ul>
+            <li><a href="tel:570 501 6717">Tel: 570-501-6717</a></li>
+            <li><a href="mailto:pweaver.psu03@gmail.com">Email: pweaver.psu03@gmail.com</a></li>
+            <!--Making Skype the call-to-action link-->
+            <li><a href="skype:hello.careerfoundry">Meet Me on Skype</a></li>
+        </ul>
+
+        <h1 role="heading">Send Me Contact Information & Message:</h1>
+        <!--Form to send user's contact info & message-->
+        <form action="" method="post" id="contact-form" role="form">
+            <p>
+                <label class="standard-label" for="user-email">Email: </label>
+                <input type="email" id="user-email" placeholder="somebody@someplace.com" required>
+            </p>
+            <p>
+                <label class="standard-label" for="user-phone" >Telephone: </label>
+                <input type="tel" id="user-phone" pattern="\d{3}[\-]\d3[\-]\d{4}" placeholder="###-###-####">
+            </p>
+            
+            <p>
+                <label class="standard-label" for="user-message">Message: </label>
+                <textarea maxlength="240" id="user-message" placeholder="Message here..." required></textarea>
+            </p>
+
+            <button action="Submit" role="button">Submit</button>
+        </form>
+
+    </div>
+
+    <!--Footer section with social media links-->
+    <footer class="page-footer">
+        <p>Follow me:</p>
+
+        <div class="social-media">
+            <a href="#"><img src="svg/bw_github_icon.svg" alt="GitHub icon hyperlink to my Github page"></a>
+            <a href="#"><img src="svg/bw_linkedin_icon.svg" alt="Linked In icon hyperlink to my Linked In page"></a>
+            <a href="#"><img src="svg/bw_twitter_icon.svg" alt="Twitter icon hyperlink to my Twitter page"></a>
+        </div>
+
+    </footer>
+
+
+    <script src="js/tota11y.min.js"></script>
+</body>
+</html>
