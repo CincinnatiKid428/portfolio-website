@@ -17,6 +17,8 @@
   --color-sky-color-change-100: #03025f;
   --font-heading-font-weight: 700;
   --margin-default-value: 10px;
+  --debug-border: 0; /* Increase to see borders for debugging */
+  --debug-border-color: magenta;
 }
 
 * {
@@ -25,7 +27,7 @@
 
 /*  -------------Body Styling-------------  */
 body {
-  /*  border: 5px solid blue; /* border for debugging  */
+  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging  */
   background: linear-gradient(var(--color-white), var(--color-background-gradient), var(--color-white));
 
   /*  Lato font from GoogleFonts  */
@@ -40,7 +42,7 @@ body {
 
 /*  -------------Header Styling-------------  */
 header {
-  /*  border: 5px solid red; /* border for debugging  */
+  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging  */
   font-size: 16px;
   line-height: 1.4;
 }
@@ -62,7 +64,7 @@ header {
 
 /*  -------------Footer Styling-------------  */
 footer {
-  /*  border: 5px solid purple; /* border for debugging  */
+  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging  */
   font-size: 16px;
   line-height: 1.4;
 }
@@ -164,7 +166,7 @@ button:focus,
 /* -------------Profile Section Styling (index.html)------------- */
 
 .profile {
-  /* border: 5px solid orange; /* border for debugging */
+  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging */
   text-align: left;
   max-width: 700px;
   height: 260px; /* use height of profile__portrait */
@@ -180,14 +182,14 @@ button:focus,
 }
 
 .profile-flexbox {
-  /* border: 5px solid brown; /* border for debugging */
+  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .profile-flexbox__item {
-  /* border: 5px solid green; /* border for debugging */
+  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging */
   margin-bottom: var(--margin-default-value);
 }
 
@@ -207,7 +209,7 @@ button:focus,
 
 @supports (display: grid) {
   .grid {
-    /* border: 5px solid green; /* border for debugging */
+    border: var(--debug-border) solid var(--debug-border-color); /* border for debugging */
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -215,7 +217,7 @@ button:focus,
 }
 
 .grid__item {
-  /* border: 1px solid #000000; /* border for debugging */
+  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging */
   background-color: var(--color-grid__item-background);
   padding: 5px;
   width: auto;
@@ -281,7 +283,7 @@ html file that makes the grid item grow slightly land flash."
 
 .about-picture {
   display: flex;
-  /* border: 2px solid blue; border used for debugging */
+  border: var(--debug-border) solid var(--debug-border-color); /* border used for debugging */
   justify-content: center;
   justify-items: center;
   margin-top: var(--margin-default-value);

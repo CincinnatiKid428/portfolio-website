@@ -6,496 +6,498 @@
 */
 
 /*  -------------Variable Definitions--------------  */
+:root { /* Increase to see borders for debugging */
+}
 
 * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*  -------------Body Styling-------------  */
+body {
+  border: 0 solid magenta; /* border for debugging  */
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(#bdd1cc), to(#fff));
+  background: -o-linear-gradient(#fff, #bdd1cc, #fff);
+  background: linear-gradient(#fff, #bdd1cc, #fff);
+
+  /*  Lato font from GoogleFonts  */
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+
+  /*  Sets the font size, line height, left margin for body element  */
+  font-size: 16px;
+  line-height: 1.2;
+  margin-left: 10px;
+}
+
+/*  -------------Header Styling-------------  */
+header {
+  border: 0 solid magenta; /* border for debugging  */
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /*  flexbox  */
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px; /*  flex-grow flex-shrink flex-basis  */
+}
+
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+/*  -------------Footer Styling-------------  */
+footer {
+  border: 0 solid magenta; /* border for debugging  */
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.page-footer {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+/* .social-media {} */
+
+/* -------------Headings Styling------------- */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* -------------Link Styling------------- */
+a {
+  color: #357b70; /*  Link color - unvisited state  */
+}
+
+a:visited {
+  color: #8a2be2; /*  Visited link color  */
+}
+
+a:hover {
+  text-decoration: none; /*  Removes underline on a link with mouseover  */
+  color: #00f;
+}
+
+a:focus {
+  text-decoration: none; /*  Removes underline on a link with mouseover  */
+  color: #00f;
+}
+
+a:active {
+  color: #489c79;
+}
+
+/* -------------Button Styling------------- */
+
+/* Borders, colors, font (inherit Lato from body rule set), padding, underline  */
+button {
+  border: none;
+  font-family: inherit;
+  background-color: #5a5a5a;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.button {
+  border: none;
+  font-family: inherit;
+  background-color: #5a5a5a;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+
+@-webkit-keyframes button-grow {
+  from {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
   }
-  
-  /*  -------------Body Styling-------------  */
-  body {
-    /*  border: 5px solid blue; /* border for debugging  */
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(#bdd1cc), to(#fff));
-    background: -o-linear-gradient(#fff, #bdd1cc, #fff);
-    background: linear-gradient(#fff, #bdd1cc, #fff);
-  
-    /*  Lato font from GoogleFonts  */
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-  
-    /*  Sets the font size, line height, left margin for body element  */
-    font-size: 16px;
-    line-height: 1.2;
-    margin-left: 10px;
+
+  to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
-  
-  /*  -------------Header Styling-------------  */
-  header {
-    /*  border: 5px solid red; /* border for debugging  */
-    font-size: 16px;
-    line-height: 1.4;
+}
+
+@keyframes button-grow {
+  from {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
   }
-  
-  .page-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; /*  flexbox  */
-    width: 100%;
-    padding: 20px;
+
+  to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
-  
-  .page-header__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 200px;
-            flex: 0 1 200px; /*  flex-grow flex-shrink flex-basis  */
+}
+
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.6; /* 60% opacity */
+  -webkit-animation: 1s button-grow 1 normal linear;
+          animation: 1s button-grow 1 normal linear;
+}
+
+/* -------------Nav Bar Styling------------- */
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item--active {
+  text-decoration: none; /* Denotes current page has no underline for link in nav menu */
+}
+
+/* -------------Profile Section Styling (index.html)------------- */
+
+.profile {
+  border: 0 solid magenta; /* border for debugging */
+  text-align: left;
+  max-width: 700px;
+  height: 260px; /* use height of profile__portrait */
+  margin: 0 auto;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.profile-flexbox {
+  border: 0 solid magenta; /* border for debugging */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile-flexbox__item {
+  border: 0 solid magenta; /* border for debugging */
+  margin-bottom: 10px;
+}
+
+.profile-flexbox__item:first-child {
+  margin-top: 20px;
+}
+
+/* -------------Grid Styling (work.html)------------- */
+
+/* START: fallback to inline-block if CSS grid unsupported */
+.grid__item {
+  display: inline-block; /* Will allow grid__item to still display */
+  width: 33%;
+}
+
+/* END: Grid fallback */
+
+@supports (display: grid) {
+  .grid {
+    border: 0 solid magenta; /* border for debugging */
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 20px;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  
-  .page-header__item:last-child {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    text-align: right;
+}
+
+.grid__item {
+  border: 0 solid magenta; /* border for debugging */
+  background-color: #d3d3d3;
+  padding: 5px;
+  width: auto;
+  min-height: auto;
+  margin: 0;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.grid__item:hover {
+  background-color: #add8e6;
+  color: #000080;
+  -webkit-transform: scale(105%);
+      -ms-transform: scale(105%);
+          transform: scale(105%);
+  -webkit-animation: 0.5s flash 1 normal;
+          animation: 0.5s flash 1 normal;
+}
+
+/*
+his flash animation is a modified excerpt from ChatGPT query :
+"I would like to add a hover transition to a grid item in my
+html file that makes the grid item grow slightly land flash."
+*/
+@-webkit-keyframes flash { /* Reveresed order of opacity so grid__item fades in */
+  0% {
+    opacity: 0;
   }
-  
-  /*  -------------Footer Styling-------------  */
-  footer {
-    /*  border: 5px solid purple; /* border for debugging  */
-    font-size: 16px;
-    line-height: 1.4;
+
+  100% {
+    opacity: 1;
   }
-  
-  .page-footer {
-    clear: both;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
+}
+@keyframes flash { /* Reveresed order of opacity so grid__item fades in */
+  0% {
+    opacity: 0;
   }
-  
-  /* .social-media {} */
-  
-  /* -------------Headings Styling------------- */
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---------------Responsive Design Section--------------- */
+
+/* For screens up to 500 pixel width (smart phones & tablets) */
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
   h1 {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 22px;
   }
-  
-  h2 {
-    font-size: 24px;
-    font-weight: 700;
+}
+
+/* --------------- Animation Secction --------------- */
+
+.about-picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 0 solid magenta; /* border used for debugging */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  margin-top: 10px;
+}
+
+/* .about-picture__forest-scene {
+
+} */
+
+/* Sun */
+@-webkit-keyframes move-sun {
+  from {
+    -webkit-transform: translate();
+            transform: translate();
   }
-  
-  h3 {
-    font-size: 18px;
-    font-weight: 700;
+
+  to {
+    -webkit-transform: translateY(180px);
+            transform: translateY(180px);
   }
-  
-  /* -------------Link Styling------------- */
-  a {
-    color: #357b70; /*  Link color - unvisited state  */
+}
+@keyframes move-sun {
+  from {
+    -webkit-transform: translate();
+            transform: translate();
   }
-  
-  a:visited {
-    color: #8a2be2; /*  Visited link color  */
+
+  to {
+    -webkit-transform: translateY(180px);
+            transform: translateY(180px);
   }
-  
-  a:hover {
-    text-decoration: none; /*  Removes underline on a link with mouseover  */
-    color: #00f;
+}
+
+.sun-inner-big,
+.sun-inner-small,
+.sun-border {
+  -webkit-animation: 10s move-sun infinite alternate ease-in-out;
+          animation: 10s move-sun infinite alternate ease-in-out;
+}
+
+/* Sky */
+@-webkit-keyframes sky-color-change { /* Changes color of the sky as sun sets & rises */
+  0% {
+    fill: #83ffff;
   }
-  
-  a:focus {
-    text-decoration: none; /*  Removes underline on a link with mouseover  */
-    color: #00f;
+
+  50% {
+    fill: #e65e03;
   }
-  
-  a:active {
-    color: #489c79;
+
+  100% {
+    fill: #03025f;
   }
-  
-  /* -------------Button Styling------------- */
-  
-  /* Borders, colors, font (inherit Lato from body rule set), padding, underline  */
-  button {
-    border: none;
-    font-family: inherit;
-    background-color: #5a5a5a;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    -webkit-transition-duration: 1s;
-         -o-transition-duration: 1s;
-            transition-duration: 1s;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
-    transition-property: opacity;
+}
+@keyframes sky-color-change { /* Changes color of the sky as sun sets & rises */
+  0% {
+    fill: #83ffff;
   }
-  .button {
-    border: none;
-    font-family: inherit;
-    background-color: #5a5a5a;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    -webkit-transition-duration: 1s;
-         -o-transition-duration: 1s;
-            transition-duration: 1s;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
-    transition-property: opacity;
+
+  50% {
+    fill: #e65e03;
   }
-  
-  @-webkit-keyframes button-grow {
-    from {
-      -webkit-transform: scale(1.1, 1.1);
-              transform: scale(1.1, 1.1);
-    }
-  
-    to {
-      -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-    }
+
+  100% {
+    fill: #03025f;
   }
-  
-  @keyframes button-grow {
-    from {
-      -webkit-transform: scale(1.1, 1.1);
-              transform: scale(1.1, 1.1);
-    }
-  
-    to {
-      -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-    }
+}
+
+.background {
+  -webkit-animation: 10s sky-color-change infinite alternate linear;
+          animation: 10s sky-color-change infinite alternate linear;
+}
+
+/* Clouds */
+@-webkit-keyframes cloud-move-left {
+  from {
+    -webkit-transform: translateX(-220px);
+            transform: translateX(-220px);
   }
-  
-  button:hover,
-  .button:hover,
-  button:focus,
-  .button:focus {
-    cursor: pointer;
-    opacity: 0.6; /* 60% opacity */
-    -webkit-animation: 1s button-grow 1 normal linear;
-            animation: 1s button-grow 1 normal linear;
+
+  to {
+    -webkit-transform: translateX(520px);
+            transform: translateX(520px);
   }
-  
-  /* -------------Nav Bar Styling------------- */
-  .navigation-list {
-    list-style-type: none;
+}
+@keyframes cloud-move-left {
+  from {
+    -webkit-transform: translateX(-220px);
+            transform: translateX(-220px);
   }
-  
-  .navigation-list li {
-    display: inline-block;
-    margin-left: 15px;
+
+  to {
+    -webkit-transform: translateX(520px);
+            transform: translateX(520px);
   }
-  
-  .navigation-list__item--active {
-    text-decoration: none; /* Denotes current page has no underline for link in nav menu */
+}
+
+@-webkit-keyframes cloud-move-right {
+  from {
+    -webkit-transform: translateX(-450px);
+            transform: translateX(-450px);
   }
-  
-  /* -------------Profile Section Styling (index.html)------------- */
-  
-  .profile {
-    /* border: 5px solid orange; /* border for debugging */
-    text-align: left;
-    max-width: 700px;
-    height: 260px; /* use height of profile__portrait */
-    margin: 0 auto;
+
+  to {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
   }
-  
-  .profile__portrait {
-    float: left;
-    width: 250px;
-    height: 250px;
-    margin-right: 40px;
-    border-radius: 50%;
+}
+
+@keyframes cloud-move-right {
+  from {
+    -webkit-transform: translateX(-450px);
+            transform: translateX(-450px);
   }
-  
-  .profile-flexbox {
-    /* border: 5px solid brown; /* border for debugging */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+
+  to {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
   }
-  
-  .profile-flexbox__item {
-    /* border: 5px solid green; /* border for debugging */
-    margin-bottom: 10px;
-  }
-  
-  .profile-flexbox__item:first-child {
-    margin-top: 20px;
-  }
-  
-  /* -------------Grid Styling (work.html)------------- */
-  
-  /* START: fallback to inline-block if CSS grid unsupported */
-  .grid__item {
-    display: inline-block; /* Will allow grid__item to still display */
-    width: 33%;
-  }
-  
-  /* END: Grid fallback */
-  
-  @supports (display: grid) {
-    .grid {
-      /* border: 5px solid green; /* border for debugging */
-      display: -ms-grid;
-      display: grid;
-      grid-gap: 20px;
-      -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-  }
-  
-  .grid__item {
-    /* border: 1px solid #000000; /* border for debugging */
-    background-color: #d3d3d3;
-    padding: 5px;
-    width: auto;
-    min-height: auto;
-    margin: 0;
-    -webkit-transition: -webkit-transform 0.2s ease;
-    transition: -webkit-transform 0.2s ease;
-    -o-transition: transform 0.2s ease;
-    transition: transform 0.2s ease;
-    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
-  }
-  
-  .grid__item:hover {
-    background-color: #add8e6;
-    color: #000080;
-    -webkit-transform: scale(105%);
-        -ms-transform: scale(105%);
-            transform: scale(105%);
-    -webkit-animation: 0.5s flash 1 normal;
-            animation: 0.5s flash 1 normal;
-  }
-  
-  /*
-  his flash animation is a modified excerpt from ChatGPT query :
-  "I would like to add a hover transition to a grid item in my
-  html file that makes the grid item grow slightly land flash."
-  */
-  @-webkit-keyframes flash { /* Reveresed order of opacity so grid__item fades in */
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes flash { /* Reveresed order of opacity so grid__item fades in */
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* ---------------Responsive Design Section--------------- */
-  
-  /* For screens up to 500 pixel width (smart phones & tablets) */
-  
-  @media all and (max-width: 500px) {
-    .grid {
-      -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media all and (min-width: 500px) and (max-width: 750px) {
-    .grid {
-      -ms-grid-columns: 1fr 20px 1fr;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  @media all and (max-width: 750px) {
-    .grid {
-      grid-gap: 10px;
-    }
-  
-    .grid__item:last-child {
-      grid-column: auto / auto;
-      grid-row: auto / auto;
-    }
-  
-    h1 {
-      font-size: 22px;
-    }
-  }
-  
-  /* --------------- Animation Secction --------------- */
-  
-  .about-picture {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* border: 2px solid blue; border used for debugging */
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    justify-items: center;
-    margin-top: 10px;
-  }
-  
-  /* .about-picture__forest-scene {
-  
-  } */
-  
-  /* Sun */
-  @-webkit-keyframes move-sun {
-    from {
-      -webkit-transform: translate();
-              transform: translate();
-    }
-  
-    to {
-      -webkit-transform: translateY(180px);
-              transform: translateY(180px);
-    }
-  }
-  @keyframes move-sun {
-    from {
-      -webkit-transform: translate();
-              transform: translate();
-    }
-  
-    to {
-      -webkit-transform: translateY(180px);
-              transform: translateY(180px);
-    }
-  }
-  
-  .sun-inner-big,
-  .sun-inner-small,
-  .sun-border {
-    -webkit-animation: 10s move-sun infinite alternate ease-in-out;
-            animation: 10s move-sun infinite alternate ease-in-out;
-  }
-  
-  /* Sky */
-  @-webkit-keyframes sky-color-change { /* Changes color of the sky as sun sets & rises */
-    0% {
-      fill: #83ffff;
-    }
-  
-    50% {
-      fill: #e65e03;
-    }
-  
-    100% {
-      fill: #03025f;
-    }
-  }
-  @keyframes sky-color-change { /* Changes color of the sky as sun sets & rises */
-    0% {
-      fill: #83ffff;
-    }
-  
-    50% {
-      fill: #e65e03;
-    }
-  
-    100% {
-      fill: #03025f;
-    }
-  }
-  
-  .background {
-    -webkit-animation: 10s sky-color-change infinite alternate linear;
-            animation: 10s sky-color-change infinite alternate linear;
-  }
-  
-  /* Clouds */
-  @-webkit-keyframes cloud-move-left {
-    from {
-      -webkit-transform: translateX(-220px);
-              transform: translateX(-220px);
-    }
-  
-    to {
-      -webkit-transform: translateX(520px);
-              transform: translateX(520px);
-    }
-  }
-  @keyframes cloud-move-left {
-    from {
-      -webkit-transform: translateX(-220px);
-              transform: translateX(-220px);
-    }
-  
-    to {
-      -webkit-transform: translateX(520px);
-              transform: translateX(520px);
-    }
-  }
-  
-  @-webkit-keyframes cloud-move-right {
-    from {
-      -webkit-transform: translateX(-450px);
-              transform: translateX(-450px);
-    }
-  
-    to {
-      -webkit-transform: translateX(200px);
-              transform: translateX(200px);
-    }
-  }
-  
-  @keyframes cloud-move-right {
-    from {
-      -webkit-transform: translateX(-450px);
-              transform: translateX(-450px);
-    }
-  
-    to {
-      -webkit-transform: translateX(200px);
-              transform: translateX(200px);
-    }
-  }
-  
-  .cloud-left {
-    -webkit-animation-name: cloud-move-left;
-            animation-name: cloud-move-left;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
-    -webkit-animation-duration: 40s;
-            animation-duration: 40s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-  }
-  
-  .cloud-right {
-    -webkit-animation-name: cloud-move-right;
-            animation-name: cloud-move-right;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
-    -webkit-animation-duration: 25s;
-            animation-duration: 25s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-  }
+}
+
+.cloud-left {
+  -webkit-animation-name: cloud-move-left;
+          animation-name: cloud-move-left;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.cloud-right {
+  -webkit-animation-name: cloud-move-right;
+          animation-name: cloud-move-right;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
