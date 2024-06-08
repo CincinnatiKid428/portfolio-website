@@ -290,7 +290,7 @@ button:focus,
 }
 
 /*
-his flash animation is a modified excerpt from ChatGPT query :
+This flash animation is a modified excerpt from ChatGPT query :
 "I would like to add a hover transition to a grid item in my
 html file that makes the grid item grow slightly land flash."
 */
@@ -346,23 +346,45 @@ html file that makes the grid item grow slightly land flash."
   }
 }
 
-/* --------------- Animation Secction --------------- */
+/* --------------- About/Animation Secction (about.html) --------------- */
 
-.about-picture {
+.about-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.about-me-text {
+  display: inline-block;
+  width: 50%;
+}
+
+.about-picture {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
   border: 0 solid magenta; /* border used for debugging */
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  justify-items: center;
   margin-top: 10px;
 }
 
-/* .about-picture__forest-scene {
-
-} */
+.svg-picture {
+  height: auto;
+  width: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 400px;
+  max-height: 400px;
+}
 
 /* Sun */
 @-webkit-keyframes move-sun {
