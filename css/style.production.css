@@ -29,6 +29,7 @@ body {
   font-size: 16px;
   line-height: 1.2;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 /*  -------------Header Styling-------------  */
@@ -367,6 +368,7 @@ html file that makes the grid item grow slightly land flash."
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
   width: 50%;
   border: 0 solid magenta; /* border used for debugging */
   margin-top: 10px;

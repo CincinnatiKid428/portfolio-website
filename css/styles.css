@@ -38,6 +38,7 @@ body {
   font-size: 16px;
   line-height: 1.2;
   margin-left: var(--margin-default-value);
+  margin-right: var(--margin-default-value);
 }
 
 /*  -------------Header Styling-------------  */
@@ -293,6 +294,7 @@ html file that makes the grid item grow slightly land flash."
 .about-picture {
   display: inline-flex;
   flex-direction: column;
+  text-align: center;
   width: 50%;
   border: var(--debug-border) solid var(--debug-border-color); /* border used for debugging */
   margin-top: var(--margin-default-value);
