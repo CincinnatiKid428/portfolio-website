@@ -17,7 +17,7 @@
   --color-sky-color-change-100: #03025f;
   --font-heading-font-weight: 700;
   --margin-default-value: 10px;
-  --debug-border: 0; /* Increase to see borders for debugging */
+  --debug-border: 2px; /* Increase to see borders for debugging */
   --debug-border-color: magenta;
 }
 
@@ -176,14 +176,19 @@ button:focus,
 
 .profile__portrait {
   float: left;
-  max-width: 250px;
-  max-height: 250px;
-  min-width: 50px;
-  min-height: 50px;
-  height: auto;
-  width: auto;
+  width: 250px;
+  height: 250px;
   margin-right: 40px;
   border-radius: 50%;
+}
+
+/* Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
+@media all and (max-width: 500px) {
+  .profile__portrait {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
 }
 
 .profile-flexbox {
@@ -191,6 +196,7 @@ button:focus,
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: middle;
 }
 
 .profile-flexbox__item {

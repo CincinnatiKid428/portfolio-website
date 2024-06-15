@@ -16,7 +16,7 @@
 
 /*  -------------Body Styling-------------  */
 body {
-  border: 0 solid magenta; /* border for debugging  */
+  border: 2px solid magenta; /* border for debugging  */
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(#bdd1cc), to(#fff));
   background: -o-linear-gradient(#fff, #bdd1cc, #fff);
   background: linear-gradient(#fff, #bdd1cc, #fff);
@@ -34,7 +34,7 @@ body {
 
 /*  -------------Header Styling-------------  */
 header {
-  border: 0 solid magenta; /* border for debugging  */
+  border: 2px solid magenta; /* border for debugging  */
   font-size: 16px;
   line-height: 1.4;
 }
@@ -62,7 +62,7 @@ header {
 
 /*  -------------Footer Styling-------------  */
 footer {
-  border: 0 solid magenta; /* border for debugging  */
+  border: 2px solid magenta; /* border for debugging  */
   font-size: 16px;
   line-height: 1.4;
 }
@@ -207,7 +207,7 @@ button:focus,
 /* -------------Profile Section Styling (index.html)------------- */
 
 .profile {
-  border: 0 solid magenta; /* border for debugging */
+  border: 2px solid magenta; /* border for debugging */
   text-align: left;
   max-width: 700px;
   height: 260px; /* use height of profile__portrait */
@@ -216,18 +216,23 @@ button:focus,
 
 .profile__portrait {
   float: left;
-  max-width: 250px;
-  max-height: 250px;
-  min-width: 50px;
-  min-height: 50px;
-  height: auto;
-  width: auto;
+  width: 250px;
+  height: 250px;
   margin-right: 40px;
   border-radius: 50%;
 }
 
+/* Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
+@media all and (max-width: 500px) {
+  .profile__portrait {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+}
+
 .profile-flexbox {
-  border: 0 solid magenta; /* border for debugging */
+  border: 2px solid magenta; /* border for debugging */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,10 +243,12 @@ button:focus,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: middle;
+      align-content: middle;
 }
 
 .profile-flexbox__item {
-  border: 0 solid magenta; /* border for debugging */
+  border: 2px solid magenta; /* border for debugging */
   margin-bottom: 10px;
 }
 
@@ -261,7 +268,7 @@ button:focus,
 
 @supports (display: grid) {
   .grid {
-    border: 0 solid magenta; /* border for debugging */
+    border: 2px solid magenta; /* border for debugging */
     display: -ms-grid;
     display: grid;
     grid-gap: 20px;
@@ -271,7 +278,7 @@ button:focus,
 }
 
 .grid__item {
-  border: 0 solid magenta; /* border for debugging */
+  border: 2px solid magenta; /* border for debugging */
   background-color: #d3d3d3;
   padding: 5px;
   width: auto;
@@ -374,7 +381,7 @@ html file that makes the grid item grow slightly land flash."
           flex-direction: column;
   text-align: center;
   width: 50%;
-  border: 0 solid magenta; /* border used for debugging */
+  border: 2px solid magenta; /* border used for debugging */
   margin-top: 10px;
 }
 
