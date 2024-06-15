@@ -17,7 +17,7 @@
   --color-sky-color-change-100: #03025f;
   --font-heading-font-weight: 700;
   --margin-default-value: 10px;
-  --debug-border: 2px; /* Increase to see borders for debugging */
+  --debug-border: 0; /* Increase to see borders for debugging */
   --debug-border-color: magenta;
 }
 
@@ -182,7 +182,7 @@ button:focus,
   border-radius: 50%;
 }
 
-/* Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
+/* Responsive design: Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
 @media all and (max-width: 500px) {
   .profile__portrait {
     width: 150px;
@@ -259,7 +259,7 @@ html file that makes the grid item grow slightly land flash."
   }
 }
 
-/* ---------------Responsive Design Section--------------- */
+/* ---------------Responsive Design Section (work.html)--------------- */
 
 /* For screens up to 500 pixel width (smart phones & tablets) */
 

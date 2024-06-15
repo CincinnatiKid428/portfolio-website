@@ -16,7 +16,7 @@
 
 /*  -------------Body Styling-------------  */
 body {
-  border: 2px solid magenta; /* border for debugging  */
+  border: 0 solid magenta; /* border for debugging  */
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(#bdd1cc), to(#fff));
   background: -o-linear-gradient(#fff, #bdd1cc, #fff);
   background: linear-gradient(#fff, #bdd1cc, #fff);
@@ -34,7 +34,7 @@ body {
 
 /*  -------------Header Styling-------------  */
 header {
-  border: 2px solid magenta; /* border for debugging  */
+  border: 0 solid magenta; /* border for debugging  */
   font-size: 16px;
   line-height: 1.4;
 }
@@ -62,7 +62,7 @@ header {
 
 /*  -------------Footer Styling-------------  */
 footer {
-  border: 2px solid magenta; /* border for debugging  */
+  border: 0 solid magenta; /* border for debugging  */
   font-size: 16px;
   line-height: 1.4;
 }
@@ -207,7 +207,7 @@ button:focus,
 /* -------------Profile Section Styling (index.html)------------- */
 
 .profile {
-  border: 2px solid magenta; /* border for debugging */
+  border: 0 solid magenta; /* border for debugging */
   text-align: left;
   max-width: 700px;
   height: 260px; /* use height of profile__portrait */
@@ -222,7 +222,7 @@ button:focus,
   border-radius: 50%;
 }
 
-/* Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
+/* Responsive design: Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
 @media all and (max-width: 500px) {
   .profile__portrait {
     width: 150px;
@@ -232,7 +232,7 @@ button:focus,
 }
 
 .profile-flexbox {
-  border: 2px solid magenta; /* border for debugging */
+  border: 0 solid magenta; /* border for debugging */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,7 +248,7 @@ button:focus,
 }
 
 .profile-flexbox__item {
-  border: 2px solid magenta; /* border for debugging */
+  border: 0 solid magenta; /* border for debugging */
   margin-bottom: 10px;
 }
 
@@ -268,7 +268,7 @@ button:focus,
 
 @supports (display: grid) {
   .grid {
-    border: 2px solid magenta; /* border for debugging */
+    border: 0 solid magenta; /* border for debugging */
     display: -ms-grid;
     display: grid;
     grid-gap: 20px;
@@ -278,7 +278,7 @@ button:focus,
 }
 
 .grid__item {
-  border: 2px solid magenta; /* border for debugging */
+  border: 0 solid magenta; /* border for debugging */
   background-color: #d3d3d3;
   padding: 5px;
   width: auto;
@@ -325,7 +325,7 @@ html file that makes the grid item grow slightly land flash."
   }
 }
 
-/* ---------------Responsive Design Section--------------- */
+/* ---------------Responsive Design Section (work.html)--------------- */
 
 /* For screens up to 500 pixel width (smart phones & tablets) */
 
@@ -381,7 +381,7 @@ html file that makes the grid item grow slightly land flash."
           flex-direction: column;
   text-align: center;
   width: 50%;
-  border: 2px solid magenta; /* border used for debugging */
+  border: 0 solid magenta; /* border used for debugging */
   margin-top: 10px;
 }
 
