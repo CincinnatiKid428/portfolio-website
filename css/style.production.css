@@ -222,6 +222,15 @@ button:focus,
   border-radius: 50%;
 }
 
+/* Responsive design: Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
+@media all and (max-width: 500px) {
+  .profile__portrait {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+  }
+}
+
 .profile-flexbox {
   border: 0 solid magenta; /* border for debugging */
   display: -webkit-box;
@@ -234,6 +243,8 @@ button:focus,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: middle;
+      align-content: middle;
 }
 
 .profile-flexbox__item {
@@ -314,7 +325,7 @@ html file that makes the grid item grow slightly land flash."
   }
 }
 
-/* ---------------Responsive Design Section--------------- */
+/* ---------------Responsive Design Section (work.html)--------------- */
 
 /* For screens up to 500 pixel width (smart phones & tablets) */
 
