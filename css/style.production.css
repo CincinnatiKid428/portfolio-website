@@ -225,8 +225,8 @@ button:focus,
 /* Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
 @media all and (max-width: 500px) {
   .profile__portrait {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin-right: 10px;
   }
 }
