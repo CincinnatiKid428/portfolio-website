@@ -11,7 +11,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*  -------------Body Styling-------------  */
@@ -49,14 +49,14 @@ header {
 
 .page-header__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px; /*  flex-grow flex-shrink flex-basis  */
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px; /*  flex-grow flex-shrink flex-basis  */
 }
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   text-align: right;
 }
 
@@ -74,8 +74,8 @@ footer {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -133,12 +133,13 @@ button {
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 1s;
-       -o-transition-duration: 1s;
-          transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
 }
+
 .button {
   border: none;
   font-family: inherit;
@@ -149,8 +150,8 @@ button {
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 1s;
-       -o-transition-duration: 1s;
-          transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
@@ -159,24 +160,24 @@ button {
 @-webkit-keyframes button-grow {
   from {
     -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
   }
 
   to {
     -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    transform: scale(1, 1);
   }
 }
 
 @keyframes button-grow {
   from {
     -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
   }
 
   to {
     -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    transform: scale(1, 1);
   }
 }
 
@@ -187,7 +188,7 @@ button:focus,
   cursor: pointer;
   opacity: 0.6; /* 60% opacity */
   -webkit-animation: 1s button-grow 1 normal linear;
-          animation: 1s button-grow 1 normal linear;
+  animation: 1s button-grow 1 normal linear;
 }
 
 /* -------------Nav Bar Styling------------- */
@@ -238,13 +239,13 @@ button:focus,
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-line-pack: middle;
-      align-content: middle;
+  align-content: middle;
 }
 
 .profile-flexbox__item {
@@ -285,9 +286,7 @@ button:focus,
   min-height: auto;
   margin: 0;
   -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
   -o-transition: transform 0.2s ease;
-  transition: transform 0.2s ease;
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
@@ -295,10 +294,10 @@ button:focus,
   background-color: #add8e6;
   color: #000080;
   -webkit-transform: scale(105%);
-      -ms-transform: scale(105%);
-          transform: scale(105%);
+  -ms-transform: scale(105%);
+  transform: scale(105%);
   -webkit-animation: 0.5s flash 1 normal;
-          animation: 0.5s flash 1 normal;
+  animation: 0.5s flash 1 normal;
 }
 
 /*
@@ -315,6 +314,7 @@ html file that makes the grid item grow slightly land flash."
     opacity: 1;
   }
 }
+
 @keyframes flash { /* Reveresed order of opacity so grid__item fades in */
   0% {
     opacity: 0;
@@ -377,8 +377,8 @@ html file that makes the grid item grow slightly land flash."
   display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
   width: 50%;
   border: 0 solid magenta; /* border used for debugging */
@@ -389,10 +389,10 @@ html file that makes the grid item grow slightly land flash."
   height: auto;
   width: auto;
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   -ms-flex-negative: 1;
-      flex-shrink: 1;
+  flex-shrink: 1;
   margin-right: auto;
   margin-left: auto;
   max-width: 400px;
@@ -403,23 +403,24 @@ html file that makes the grid item grow slightly land flash."
 @-webkit-keyframes move-sun {
   from {
     -webkit-transform: translate();
-            transform: translate();
+    transform: translate();
   }
 
   to {
     -webkit-transform: translateY(180px);
-            transform: translateY(180px);
+    transform: translateY(180px);
   }
 }
+
 @keyframes move-sun {
   from {
     -webkit-transform: translate();
-            transform: translate();
+    transform: translate();
   }
 
   to {
     -webkit-transform: translateY(180px);
-            transform: translateY(180px);
+    transform: translateY(180px);
   }
 }
 
@@ -427,7 +428,7 @@ html file that makes the grid item grow slightly land flash."
 .sun-inner-small,
 .sun-border {
   -webkit-animation: 10s move-sun infinite alternate ease-in-out;
-          animation: 10s move-sun infinite alternate ease-in-out;
+  animation: 10s move-sun infinite alternate ease-in-out;
 }
 
 /* Sky */
@@ -444,6 +445,7 @@ html file that makes the grid item grow slightly land flash."
     fill: #03025f;
   }
 }
+
 @keyframes sky-color-change { /* Changes color of the sky as sun sets & rises */
   0% {
     fill: #83ffff;
@@ -460,79 +462,80 @@ html file that makes the grid item grow slightly land flash."
 
 .background {
   -webkit-animation: 10s sky-color-change infinite alternate linear;
-          animation: 10s sky-color-change infinite alternate linear;
+  animation: 10s sky-color-change infinite alternate linear;
 }
 
 /* Clouds */
 @-webkit-keyframes cloud-move-left {
   from {
     -webkit-transform: translateX(-220px);
-            transform: translateX(-220px);
+    transform: translateX(-220px);
   }
 
   to {
     -webkit-transform: translateX(520px);
-            transform: translateX(520px);
+    transform: translateX(520px);
   }
 }
+
 @keyframes cloud-move-left {
   from {
     -webkit-transform: translateX(-220px);
-            transform: translateX(-220px);
+    transform: translateX(-220px);
   }
 
   to {
     -webkit-transform: translateX(520px);
-            transform: translateX(520px);
+    transform: translateX(520px);
   }
 }
 
 @-webkit-keyframes cloud-move-right {
   from {
     -webkit-transform: translateX(-450px);
-            transform: translateX(-450px);
+    transform: translateX(-450px);
   }
 
   to {
     -webkit-transform: translateX(200px);
-            transform: translateX(200px);
+    transform: translateX(200px);
   }
 }
 
 @keyframes cloud-move-right {
   from {
     -webkit-transform: translateX(-450px);
-            transform: translateX(-450px);
+    transform: translateX(-450px);
   }
 
   to {
     -webkit-transform: translateX(200px);
-            transform: translateX(200px);
+    transform: translateX(200px);
   }
 }
 
 .cloud-left {
   -webkit-animation-name: cloud-move-left;
-          animation-name: cloud-move-left;
+  animation-name: cloud-move-left;
   -webkit-animation-direction: normal;
-          animation-direction: normal;
+  animation-direction: normal;
   -webkit-animation-duration: 40s;
-          animation-duration: 40s;
+  animation-duration: 40s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 .cloud-right {
   -webkit-animation-name: cloud-move-right;
-          animation-name: cloud-move-right;
+  animation-name: cloud-move-right;
   -webkit-animation-direction: normal;
-          animation-direction: normal;
+  animation-direction: normal;
   -webkit-animation-duration: 25s;
-          animation-duration: 25s;
+  animation-duration: 25s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
