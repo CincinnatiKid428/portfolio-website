@@ -286,7 +286,8 @@ button:focus,
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
-.grid__item:hover {
+.grid__item:hover,
+.grid__item:active {
   background-color: #add8e6;
   color: #000080;
   -webkit-transform: scale(105%);
