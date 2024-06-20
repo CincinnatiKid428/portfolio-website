@@ -394,15 +394,15 @@ html file that makes the grid item grow slightly land flash."
   margin-left: auto;
   max-width: 400px;
   max-height: 400px;
-  min-width: 100px;
-  min-height: 100px;
+  min-width: 150px;
+  min-height: 150px;
 }
 
 /* Adjust size of SVG for small width screens */
 @media all and (max-width: 500px) {
   .svg-picture {
-    height: 225px;
-    width: 225px;
+    height: 150px;
+    width: 150px;
   }
 }
 

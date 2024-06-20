@@ -324,8 +324,8 @@ html file that makes the grid item grow slightly land flash."
 
 @media all and (max-width: 500px) {
   .svg-picture {
-    height: 225px;
-    width: 225px;
+    height: 150px;
+    width: 150px;
   }
 }
 
