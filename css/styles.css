@@ -294,6 +294,7 @@ html file that makes the grid item grow slightly land flash."
 
 .about-container {
   display: flex;
+  flex-direction: row;
 }
 
 .about-me-text {
