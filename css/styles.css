@@ -298,15 +298,15 @@ html file that makes the grid item grow slightly land flash."
 
 .about-me-text {
   display: inline-block;
-  width: 50%;
+  width: 1fr;
 }
 
 .about-picture {
   display: inline-flex;
   flex-direction: column;
   text-align: center;
-  width: 50%;
-  max-width: 50%;
+  width: 1fr;
+  max-width: 1fr;
   border: var(--debug-border) solid var(--debug-border-color); /* border used for debugging */
   margin-top: var(--margin-default-value);
 }
@@ -323,9 +323,13 @@ html file that makes the grid item grow slightly land flash."
 }
 
 @media all and (max-width: 500px) {
+  .about-container {
+    flex-direction: column;
+  }
+
   .svg-picture {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
   }
 }
 
