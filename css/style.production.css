@@ -368,7 +368,7 @@ html file that makes the grid item grow slightly land flash."
 
 .about-me-text {
   display: inline-block;
-  width: 1fr;
+  width: 60%;
 }
 
 .about-picture {
@@ -380,8 +380,7 @@ html file that makes the grid item grow slightly land flash."
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  width: 1fr;
-  max-width: 1fr;
+  width: 40%;
   border: 0 solid magenta; /* border used for debugging */
   margin-top: 10px;
 }
@@ -400,7 +399,6 @@ html file that makes the grid item grow slightly land flash."
   max-height: 400px;
 }
 
-/* Responsive design for SVG for small screens */
 @media all and (max-width: 500px) {
   .about-container {
     -webkit-box-orient: vertical;
@@ -409,9 +407,12 @@ html file that makes the grid item grow slightly land flash."
     flex-direction: column;
   }
 
-  .svg-picture {
-    height: 200px;
-    width: 200px;
+  .about-me-text {
+    width: auto;
+  }
+
+  .about-picture {
+    width: auto;
   }
 }
 
