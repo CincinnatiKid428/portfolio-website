@@ -398,6 +398,14 @@ html file that makes the grid item grow slightly land flash."
   min-height: 100px;
 }
 
+/* Adjust size of SVG for small width screens */
+@media all and (max-width: 500px) {
+  .svg-picture {
+    height: 225px;
+    width: 225px;
+  }
+}
+
 /* Sun */
 @-webkit-keyframes move-sun {
   from {
