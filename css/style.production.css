@@ -377,6 +377,7 @@ html file that makes the grid item grow slightly land flash."
   flex-direction: column;
   text-align: center;
   width: 50%;
+  max-width: 50%;
   border: 0 solid magenta; /* border used for debugging */
   margin-top: 10px;
 }
