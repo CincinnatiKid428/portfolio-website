@@ -118,6 +118,7 @@
     //Prevent default action for submit on form
     form.addEventListener('submit', (e)=>{
         e.preventDefault();
+        console.log('* * * Trying to submit form - prevented default behavior!');
         let validInput = validateForm();
         if(validInput){
             alert('This would submit email/phone to the server!');

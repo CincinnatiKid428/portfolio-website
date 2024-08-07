@@ -560,7 +560,7 @@ html file that makes the grid item grow slightly land flash."
 
 /* -------------- Error message class (contact.html) -------------- */
 .error-msg {
-  color: red;
+  color: #ff0000;
   font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
 }
