@@ -60,19 +60,19 @@
         <h1 role="heading">Send Me Contact Information &amp; Message:</h1>
         <!--Form to send user's contact info & message-->
         <form action="" method="post" id="contact-form" role="form">
-            <p>
+            <div>
                 <label class="standard-label" for="user-email">Email: </label>
-                <input type="email" id="user-email" placeholder="somebody@someplace.com" required>
-            </p>
-            <p>
+                <input id="user-email" placeholder="somebody@someplace.com">
+            </div>
+            <div>
                 <label class="standard-label" for="user-phone" >Telephone: </label>
-                <input type="tel" id="user-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="###-###-####">
-            </p>
+                <input id="user-phone" placeholder="###-###-####">
+            </div>
             
-            <p>
+            <div>
                 <label class="standard-label" for="user-message">Message: </label>
-                <textarea maxlength="240" id="user-message" placeholder="Message here..." required></textarea>
-            </p>
+                <textarea maxlength="240" id="user-message" placeholder="Message here..."></textarea>
+            </div>
 
             <button type="submit" role="button">Submit</button>
         </form>
@@ -91,7 +91,7 @@
 
     </footer>
 
-
+    <script src="js/scripts-contact.js"></script>
     <!--script src="js/tota11y.min.js"></script-->
 </body>
 </html>

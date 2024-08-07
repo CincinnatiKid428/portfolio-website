@@ -555,5 +555,12 @@ html file that makes the grid item grow slightly land flash."
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+/* -------------- Error message class (contact.html) -------------- */
+.error-msg {
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
 }
