@@ -1,6 +1,6 @@
 /*  -------------Variable Definitions--------------  */
 :root {
-  --color-background-gradient: #bdd1cc;
+  --color-background-gradient: #ececec;
   --color-unvisited-link: #357b70;
   --color-visited-link: #8a2be2;
   --color-active-link: #489c79;
@@ -213,7 +213,7 @@ button:focus,
 /* START: fallback to inline-block if CSS grid unsupported */
 .grid__item {
   display: inline-block; /* Will allow grid__item to still display */
-  width: 33%;
+  width: 30%;
 }
 
 /* END: Grid fallback */
@@ -223,7 +223,7 @@ button:focus,
     border: var(--debug-border) solid var(--debug-border-color); /* border for debugging */
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -257,6 +257,13 @@ html file that makes the grid item grow slightly land flash."
   100% {
     opacity: 1;
   }
+}
+
+.grid__item_img {
+  width: 100%;
+  height: auto;
+  border-radius: 3%;
+  display: block;
 }
 
 /* ---------------Responsive Design Section (work.html)--------------- */
