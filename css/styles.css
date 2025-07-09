@@ -77,7 +77,16 @@ footer {
   text-align: center;
 }
 
-/* .social-media {} */
+.social-media-icons {
+  height: 30px;
+  width: 30px;
+  transition: transform 0.2s ease;
+} 
+
+.social-media-icons:hover {
+    cursor: pointer;
+  transform: scale(110%);
+}
 
 /* -------------Headings Styling------------- */
 h1 {
@@ -230,7 +239,7 @@ button:focus,
 .grid__item {
   border: var(--debug-border) solid var(--debug-border-color); /* border for debugging */
   background-color: var(--color-grid__item-background);
-  padding: 5px;
+  padding: 10px;
   width: auto;
   min-height: auto;
   margin: 0;
@@ -240,8 +249,8 @@ button:focus,
 .grid__item:hover {
   background-color: var(--color-grid__item-hover-background);
   color: var(--color-grid__item-hover-text-color);
-  transform: scale(105%);
-  animation: 0.5s flash 1 normal;
+  transform: scale(102%);
+  /*animation: 0.5s flash 1 normal; remove or keep? preference? */
 }
 
 /*

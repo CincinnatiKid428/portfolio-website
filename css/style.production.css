@@ -79,7 +79,22 @@ footer {
   text-align: center;
 }
 
-/* .social-media {} */
+.social-media-icons {
+  height: 30px;
+  width: 30px;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+} 
+
+.social-media-icons:hover {
+    cursor: pointer;
+  -webkit-transform: scale(110%);
+      -ms-transform: scale(110%);
+          transform: scale(110%);
+}
 
 /* -------------Headings Styling------------- */
 h1 {
@@ -280,7 +295,7 @@ button:focus,
 .grid__item {
   border: 0 solid magenta; /* border for debugging */
   background-color: #d3d3d3;
-  padding: 5px;
+  padding: 10px;
   width: auto;
   min-height: auto;
   margin: 0;
@@ -294,11 +309,10 @@ button:focus,
 .grid__item:hover {
   background-color: #add8e6;
   color: #000080;
-  -webkit-transform: scale(105%);
-      -ms-transform: scale(105%);
-          transform: scale(105%);
-  -webkit-animation: 0.5s flash 1 normal;
-          animation: 0.5s flash 1 normal;
+  -webkit-transform: scale(102%);
+      -ms-transform: scale(102%);
+          transform: scale(102%);
+  /*animation: 0.5s flash 1 normal; remove or keep? preference? */
 }
 
 /*
