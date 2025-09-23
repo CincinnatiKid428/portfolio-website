@@ -9,7 +9,7 @@ projects I have worked on while a student at CareerFoundry's Full-Stack Web Deve
 This is the landing page for my portfolio site.
 ### 🧢 About Me
 This page contains a few personal details and links to my resume/CV.
-### 📧 Contact
+### 📬 Contact
 This page displays an email address link that will open the default email program with a new message addressed to me.  
 ### 💻 Work
 This page contains all projects I worked on as a student at CareerFoundry with short descriptions of each project, a 
@@ -21,3 +21,4 @@ link to the live application or a demo video of the application in use.
  - CSS
  - JavaScript
  - GitHub Pages (hosting)
+ - [ReCraft AI](https://app.recraft.ai) (generated SVG image to customize on About Me page)
