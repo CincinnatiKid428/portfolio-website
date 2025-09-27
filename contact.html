@@ -61,23 +61,26 @@
         <h1 role="heading">Send Me Contact Information &amp; Message:</h1>
 
         <form action="" method="post" id="contact-form" role="form">
+
+            <div>
+                <label class="standard-label" for="user-name">Name: </label>
+                <input id="user-name" name="name" placeholder="Your name" required>
+            </div>
+
             <div>
                 <label class="standard-label" for="user-email">Email: </label>
-                <input id="user-email" placeholder="somebody@someplace.com">
-            </div>
-            <div>
-                <label class="standard-label" for="user-phone">Telephone: </label>
-                <input id="user-phone" placeholder="###-###-####">
+                <input id="user-email" name="email" placeholder="somebody@someplace.com" required>
             </div>
 
             <div>
                 <label class="standard-label" for="user-message">Message: </label>
-                <textarea maxlength="240" id="user-message" placeholder="Message here..."></textarea>
+                <textarea maxlength="240" id="user-message" name="message" placeholder="Message here..."
+                    required></textarea>
             </div>
 
             <button type="submit" role="button">Submit</button>
         </form>
-        -->
+-->
     </div>
 
     <!--Footer section with social media links-->

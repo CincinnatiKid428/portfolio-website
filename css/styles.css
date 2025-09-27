@@ -283,6 +283,15 @@ html file that makes the grid item grow slightly land flash."
   .grid {
     grid-template-columns: 1fr;
   }
+
+  .navigation-list li {
+    margin-left: 12px;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
@@ -299,10 +308,6 @@ html file that makes the grid item grow slightly land flash."
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
-  }
-
-  h1 {
-    font-size: 22px;
   }
 }
 
