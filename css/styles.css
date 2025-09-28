@@ -4,7 +4,7 @@
   --color-unvisited-link: #357b70;
   --color-visited-link: #8a2be2;
   --color-active-link: #489c79;
-  --color-button-background: #5a5a5a;
+  --color-button-background: #dededede;
   --color-white: #fff;
   --color-black: #000;
   --color-blue: #00f;
@@ -16,8 +16,8 @@
   --color-sky-color-change-50: #e65e03;
   --color-sky-color-change-100: #03025f;
   --font-heading-font-weight: 700;
-  --margin-default-value: 10px;
-  --debug-border: 0; /* Increase to see borders for debugging */
+  --margin-default-value: 20px;
+  --debug-border: 0px; /* Increase to see borders for debugging */
   --debug-border-color: magenta;
 }
 
@@ -28,7 +28,7 @@
 /*  -------------Body Styling-------------  */
 body {
   border: var(--debug-border) solid var(--debug-border-color); /* border for debugging  */
-  background: linear-gradient(var(--color-white), var(--color-background-gradient), var(--color-white));
+  /*background: linear-gradient(var(--color-white), var(--color-background-gradient), var(--color-white));*/
 
   /*  Lato font from GoogleFonts  */
   font-family: 'Lato', sans-serif;
@@ -41,17 +41,35 @@ body {
   margin-right: var(--margin-default-value);
 }
 
+/* -------------Link Styling------------- */
+a {
+  color: var(--color-unvisited-link); /*  Link color - unvisited state  */
+}
+
+a:hover,
+a:focus {
+  text-decoration: none; /*  Removes underline on a link with mouseover  */
+  color: var(--color-blue);
+}
+
+a:active {
+  color: var(--color-active-link);
+}
+
 /*  -------------Header Styling-------------  */
 header {
-  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging  */
+  border: var(--debug-border) solid brown; /* border for debugging  */
   font-size: 16px;
   line-height: 1.4;
+  margin-bottom: 30px;
 }
 
 .page-header {
   display: flex; /*  flexbox  */
   width: 100%;
-  padding: 20px;
+  align-items: center;
+  border: var(--debug-border) dashed green; /* border for debugging  */
+
 }
 
 .page-header__item {
@@ -60,7 +78,61 @@ header {
 
 .page-header__item:last-child {
   flex-grow: 1;
-  text-align: right;
+}
+
+/* -------------Nav Bar Styling------------- */
+.navigation-list {
+  border: var(--debug-border) dashed blue; /* border for debugging  */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end; /* Right align buttons */
+}
+
+.navigation-list__item {
+  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging  */
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #dededede;
+  color: #000000;
+  text-decoration: none;
+  height: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.navigation-list__item-left_button{
+  border-start-start-radius: 20px;
+  border-end-start-radius: 20px;
+}
+
+.navigation-list__item-right_button{
+  border-start-end-radius: 20px;
+  border-end-end-radius: 20px;
+}
+
+
+.navigation-list__item:hover,
+.navigation-list__item:focus {
+  background-color: #f0f0f0;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.logo-image{
+    border: var(--debug-border) dashed red; /* border for debugging  */
+  width:30%;
+}
+
+@media all and (max-width: 570px) {
+  .navigation-list__item {
+    font-size: 14px;
+    height:30px;
+  }
 }
 
 /*  -------------Footer Styling-------------  */
@@ -84,7 +156,7 @@ footer {
 } 
 
 .social-media-icons:hover {
-    cursor: pointer;
+  cursor: pointer;
   transform: scale(110%);
 }
 
@@ -104,73 +176,39 @@ h3 {
   font-weight: var(--font-heading-font-weight);
 }
 
-/* -------------Link Styling------------- */
-a {
-  color: var(--color-unvisited-link); /*  Link color - unvisited state  */
-}
-
-a:visited {
-  color: var(--color-visited-link); /*  Visited link color  */
-}
-
-a:hover,
-a:focus {
-  text-decoration: none; /*  Removes underline on a link with mouseover  */
-  color: var(--color-blue);
-}
-
-a:active {
-  color: var(--color-active-link);
-}
-
 /* -------------Button Styling------------- */
 
 /* Borders, colors, font (inherit Lato from body rule set), padding, underline  */
 button,
 .button {
-  border: none;
   font-family: inherit;
   background-color: var(--color-button-background);
-  color: var(--color-white);
+  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging  */
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #dededede;
+  color: #000000;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid var(--color-button-border-bottom);
-  transition-duration: 1s;
-  transition-property: opacity;
-}
-
-@keyframes button-grow {
-  from {
-    transform: scale(1.1, 1.1);
-  }
-
-  to {
-    transform: scale(1, 1);
-  }
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 button:hover,
-.button:hover,
-button:focus,
-.button:focus {
+.button:hover{
   cursor: pointer;
-  opacity: 0.6; /* 60% opacity */
-  animation: 1s button-grow 1 normal linear;
+  background-color: #f0f0f0;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  outline: none;
 }
 
-/* -------------Nav Bar Styling------------- */
-.navigation-list {
-  list-style-type: none;
-}
-
-.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.navigation-list__item--active {
-  text-decoration: none; /* Denotes current page has no underline for link in nav menu */
+button:active,
+.button:active{
+  transform: translateY(3px);
 }
 
 /* -------------Profile Section Styling (index.html)------------- */
@@ -188,7 +226,7 @@ button:focus,
   width: 250px;
   height: 250px;
   margin-right: 40px;
-  border-radius: 50%;
+  border-radius: 15%;
 }
 
 /* Responsive design: Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
@@ -284,13 +322,8 @@ html file that makes the grid item grow slightly land flash."
     grid-template-columns: 1fr;
   }
 
-  .navigation-list li {
-    margin-left: 12px;
-    font-size: 12px;
-  }
-
   h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -314,6 +347,7 @@ html file that makes the grid item grow slightly land flash."
 /* --------------- About/Animation Secction (about.html) --------------- */
 
 .about-container {
+  border: var(--debug-border) dashed orange;
   display: flex;
   flex-direction: row;
 }
@@ -325,10 +359,9 @@ html file that makes the grid item grow slightly land flash."
 }
 
 .about-picture {
-  display: inline-flex;
-  flex-direction: column;
+  display: inline-block;
   width: 40%;
-  border: var(--debug-border) solid var(--debug-border-color); /* border used for debugging */
+  border: var(--debug-border) solid blue; /* border used for debugging */
   margin-top: var(--margin-default-value);
 }
 
@@ -343,7 +376,7 @@ html file that makes the grid item grow slightly land flash."
   max-height: 400px;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 570px) {
   .about-container {
     flex-direction: column;
   }
@@ -353,7 +386,11 @@ html file that makes the grid item grow slightly land flash."
   }
 
   .about-picture {
-    width: auto;
+    border: var(--debug-border) dashed purple;
+    width: 100%;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
   }
 }
 

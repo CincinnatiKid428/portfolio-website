@@ -1,4 +1,4 @@
-// js/footer.js
+// File: js/footer.js
 
 document.addEventListener("DOMContentLoaded", function () {
   const footer = document.createElement("footer");
