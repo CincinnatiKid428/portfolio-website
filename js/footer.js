@@ -12,9 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
       <a href="#">
         <img class="social-media-icons" src="svg/bw_linkedin_icon.svg"
              alt="LinkedIn icon hyperlink to my LinkedIn page"></a>
-      <a href="#">
-        <img class="social-media-icons" src="svg/bw_twitter_icon.svg"
-             alt="X icon hyperlink to my Twitter page"></a>
     </div>
   `;
 
