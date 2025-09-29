@@ -71,7 +71,9 @@ header {
 }
 
 .page-header__item {
-  flex: 0 1 200px; /*  flex-grow flex-shrink flex-basis  */
+  /*flex: 0 1 200px;   flex-grow flex-shrink flex-basis  */
+  flex-shrink: 1;
+  flex-grow: 0;
 }
 
 .page-header__item:last-child {
@@ -91,7 +93,8 @@ header {
 .navigation-list__item {
   border: var(--debug-border) solid orange; /* border for debugging  */
   display: inline-block;
-  padding: 0.5em 1em;
+  flex-shrink: 1;
+  padding: 0.5em 0.5em;
   background-color: #dededede;
   color: #000000;
   text-decoration: none;
@@ -212,7 +215,8 @@ button:active,
 /* -------------Profile Section Styling (index.html)------------- */
 
 .profile {
-  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging */
+  border: var(--debug-border) solid blue; /* border for debugging */
+  display:flex;
   text-align: left;
   max-width: 700px;
   height: 260px; /* use height of profile__portrait */
@@ -220,7 +224,9 @@ button:active,
 }
 
 .profile__portrait {
+  border: var(--debug-border) solid red; /* border for debugging */
   float: left;
+  align-self:center;
   width: 250px;
   height: 250px;
   margin-right: 40px;
@@ -237,7 +243,7 @@ button:active,
 }
 
 .profile-flexbox {
-  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging */
+  border: var(--debug-border) dashed orange; /* border for debugging */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -245,7 +251,7 @@ button:active,
 }
 
 .profile-flexbox__item {
-  border: var(--debug-border) solid var(--debug-border-color); /* border for debugging */
+  border: var(--debug-border) solid green; /* border for debugging */
   margin-bottom: var(--margin-default-value);
 }
 
