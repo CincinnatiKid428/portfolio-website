@@ -94,7 +94,7 @@ header {
   border: var(--debug-border) solid orange; /* border for debugging  */
   display: inline-block;
   flex-shrink: 1;
-  padding: 0.5em 0.5em;
+  padding: 0.5em 1em;
   background-color: #dededede;
   color: #000000;
   text-decoration: none;
@@ -132,7 +132,9 @@ header {
 @media all and (max-width: 570px) {
   .navigation-list__item {
     font-size: 14px;
+    flex-shrink: 1;
     height:35px;
+    padding: 0.5em 0.5em;
   }
 }
 
