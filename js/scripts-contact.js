@@ -75,29 +75,30 @@
 
 
     //Simple validation of phone number entered by user
-    function validatePhone() {
-
-        let enteredPhone = phone.value;
-        DEBUG_LOG && console.log('> >|validatePhone()| Started with phone number entered: ' + enteredPhone);
-
-        //If there was no phone entered
-        if (!enteredPhone) {
-            showErrorMessage(phone, 'Phone number is required');
-            return false;
-        }
-
-        //Test if phone number entered doet not match regular expression
-        DEBUG_LOG && console.log('|validatePhone()| Phone number matches regular expression:' + phoneRegex.test(enteredPhone));
-        if (!phoneRegex.test(enteredPhone)) {
-            showErrorMessage(phone, 'Phone number is not valid');
-            return false;
-        }
-
-        //Phone number must be valid at this point, clear error message
-        showErrorMessage(phone, null);
-        return true;
-    }//end validatePhone()
-
+    /*
+        function validatePhone() {
+    
+            let enteredPhone = phone.value;
+            DEBUG_LOG && console.log('> >|validatePhone()| Started with phone number entered: ' + enteredPhone);
+    
+            //If there was no phone entered
+            if (!enteredPhone) {
+                showErrorMessage(phone, 'Phone number is required');
+                return false;
+            }
+    
+            //Test if phone number entered doet not match regular expression
+            DEBUG_LOG && console.log('|validatePhone()| Phone number matches regular expression:' + phoneRegex.test(enteredPhone));
+            if (!phoneRegex.test(enteredPhone)) {
+                showErrorMessage(phone, 'Phone number is not valid');
+                return false;
+            }
+    
+            //Phone number must be valid at this point, clear error message
+            showErrorMessage(phone, null);
+            return true;
+        }//end validatePhone()
+    */
 
     //Validates form by calling for validation of email
     function validateForm() {
@@ -124,6 +125,10 @@
 
         if (!name || !email || !message) {
             alert("Please fill out all fields.");
+            return;
+        }
+
+        if (!validateForm()) {
             return;
         }
 

@@ -14,8 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
+    <!--
     <link rel="stylesheet" type="text/css" href="css/style.production.css">
+-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="shortcut icon" href="img/favicon-32x32.png">
 </head>
 
@@ -26,7 +28,7 @@
     <!--Content pane-->
     <div class="contact-me">
 
-        <h1 role="heading">Contact Information</h1>
+        <h1 role="heading">Contact Me</h1>
         <div>If you would like to get in touch with me, feel free to
             <a href="mailto:pweaver.psu03@gmail.com">email me</a>
             and I will usually be able to respond within 24 hours.
@@ -37,25 +39,44 @@
             <!--li><a href="skype:hello.careerfoundry">Meet Me on Skype</a></li-->
         </ul>
 
-        <!--Form to send user's contact info & message
-        <h1 role="heading">Send Me Contact Information &amp; Message:</h1>
 
-        <form action="" method="post" id="contact-form" role="form">
+        <form class="contact-message-form" action="" method="post" id="contact-form" role="form">
 
-            <div>
+            <h1 role="heading">Send Me a Message</h1>
+
+            <div class="input-container">
                 <label class="standard-label" for="user-name">Name: </label>
-                <input id="user-name" name="name" placeholder="Your name" required>
+                <input class="input-field" id="user-name" name="name" required>
             </div>
 
+            <div class="input-container">
+                <label class="standard-label" for="user-email">Email: </label>
+                <input class="input-field" id="user-email" name="email" required>
+            </div>
+
+            <div class="input-container">
+                <label class="standard-label" for="user-message">Message: </label>
+                <textarea class="input-textarea" maxlength="240" id="user-message" name="message" required></textarea>
+            </div>
+            <div class="input-container">
+                <button class="contact-submit-button" type="submit" role="button">Submit</button>
+            </div>
+        </form>
+
+        <!--Form to send user's contact info & message
+        <form action="" method="post" id="contact-form" role="form">
             <div>
                 <label class="standard-label" for="user-email">Email: </label>
-                <input id="user-email" name="email" placeholder="somebody@someplace.com" required>
+                <input id="user-email">
+            </div>
+            <div>
+                <label class="standard-label" for="user-phone">Telephone: </label>
+                <input id="user-phone">
             </div>
 
             <div>
                 <label class="standard-label" for="user-message">Message: </label>
-                <textarea maxlength="240" id="user-message" name="message" placeholder="Message here..."
-                    required></textarea>
+                <textarea maxlength="240" id="user-message"></textarea>
             </div>
 
             <button type="submit" role="button">Submit</button>
