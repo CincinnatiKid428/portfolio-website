@@ -366,6 +366,7 @@ html file that makes the grid item grow slightly and flash."
   display: inline-flex;
   flex-direction: column;
   width: 60%;
+  padding-right: 5px;
 }
 
 .about-picture {
