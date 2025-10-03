@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
       <a href="https://x.com/PhilipW42823" target="_blank">
         <img class="social-media-icons" src="svg/bw_x_icon.svg"
              alt="X icon hyperlink to my X page"></a>
+      <a href="https://medium.com/@bigpaws_9741" target="_blank">
+        <img class="social-media-icons" src="svg/bw_medium_icon.svg"
+             alt="Medium icon hyperlink to my Medium profile"></a>
+             
     </div>
   `;
 
