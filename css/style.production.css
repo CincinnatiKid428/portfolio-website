@@ -16,10 +16,8 @@
 
 /*  -------------Body Styling-------------  */
 body {
-  border: 0 solid magenta; /* border for debugging  */
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(#ececec), to(#fff));
-  background: -o-linear-gradient(#fff, #ececec, #fff);
-  background: linear-gradient(#fff, #ececec, #fff);
+  border: 0px dashed red; /* border for debugging  */
+  /*background: linear-gradient(var(--color-white), var(--color-background-gradient), var(--color-white));*/
 
   /*  Lato font from GoogleFonts  */
   font-family: 'Lato', sans-serif;
@@ -28,15 +26,33 @@ body {
   /*  Sets the font size, line height, left margin for body element  */
   font-size: 16px;
   line-height: 1.2;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* -------------Link Styling------------- */
+a {
+  color: #357b70; /*  Link color - unvisited state  */
+}
+
+a:hover {
+  text-decoration: none; /*  Removes underline on a link with mouseover  */
+  color: #00f;
+}
+
+a:focus {
+  text-decoration: none; /*  Removes underline on a link with mouseover  */
+  color: #00f;
+}
+
+a:active {
+  color: #489c79;
 }
 
 /*  -------------Header Styling-------------  */
 header {
-  border: 0 solid magenta; /* border for debugging  */
-  font-size: 16px;
   line-height: 1.4;
+  margin-bottom: 30px;
 }
 
 .page-header {
@@ -44,27 +60,106 @@ header {
   display: -ms-flexbox;
   display: flex; /*  flexbox  */
   width: 100%;
-  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0px dashed green; /* border for debugging  */
+
 }
 
 .page-header__item {
+  /*flex: 0 1 200px;   flex-grow flex-shrink flex-basis  */
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px; /*  flex-grow flex-shrink flex-basis  */
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  text-align: right;
+}
+
+/* -------------Nav Bar Styling------------- */
+.navigation-list {
+  border: 0px dashed blue; /* border for debugging  */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; /* Right align buttons */
+}
+
+.navigation-list__item {
+  border: 0px solid orange; /* border for debugging  */
+  display: inline-block;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  padding: 0.5em 1em;
+  background-color: #dededede;
+  color: #000000;
+  text-decoration: none;
+  height: 40px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  font-weight: normal;
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.navigation-list__item-left_button{
+  border-start-start-radius: 20px;
+  border-end-start-radius: 20px;
+}
+
+.navigation-list__item-right_button{
+  border-start-end-radius: 20px;
+  border-end-end-radius: 20px;
+}
+
+
+.navigation-list__item:hover,
+.navigation-list__item:focus {
+  background-color: #f0f0f0;
+  color: #000;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.logo-image{
+  border: 0px dashed red; /* border for debugging  */
+  width:30%;
+  max-width: 200px;
+  max-height: 70px;
+}
+
+@media all and (max-width: 570px) {
+  .navigation-list__item {
+    font-size: 14px;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    height:35px;
+    padding: 0.5em 0.5em;
+  }
 }
 
 /*  -------------Footer Styling-------------  */
 footer {
-  border: 0 solid magenta; /* border for debugging  */
+  border: 0px dashed green; /* border for debugging  */
   font-size: 16px;
   line-height: 1.4;
+  margin-bottom: 30px;
 }
 
 .page-footer {
@@ -90,7 +185,7 @@ footer {
 } 
 
 .social-media-icons:hover {
-    cursor: pointer;
+  cursor: pointer;
   -webkit-transform: scale(110%);
       -ms-transform: scale(110%);
           transform: scale(110%);
@@ -112,117 +207,74 @@ h3 {
   font-weight: 700;
 }
 
-/* -------------Link Styling------------- */
-a {
-  color: #357b70; /*  Link color - unvisited state  */
-}
-
-a:visited {
-  color: #8a2be2; /*  Visited link color  */
-}
-
-a:hover {
-  text-decoration: none; /*  Removes underline on a link with mouseover  */
-  color: #00f;
-}
-
-a:focus {
-  text-decoration: none; /*  Removes underline on a link with mouseover  */
-  color: #00f;
-}
-
-a:active {
-  color: #489c79;
-}
-
 /* -------------Button Styling------------- */
 
 /* Borders, colors, font (inherit Lato from body rule set), padding, underline  */
 button {
-  border: none;
   font-family: inherit;
-  background-color: #5a5a5a;
-  color: #fff;
+  background-color: #dededede;
+  border: 0px solid #5a535a; /* border for debugging  */
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #dededede;
+  color: #000000;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition-duration: 1s;
-       -o-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  text-align: center;
 }
 .button {
-  border: none;
   font-family: inherit;
-  background-color: #5a5a5a;
-  color: #fff;
+  background-color: #dededede;
+  border: 0px solid #5a535a; /* border for debugging  */
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #dededede;
+  color: #000000;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition-duration: 1s;
-       -o-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-}
-
-@-webkit-keyframes button-grow {
-  from {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-  }
-
-  to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-
-@keyframes button-grow {
-  from {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-  }
-
-  to {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
+  height: 40px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  text-align: center;
 }
 
 button:hover,
-.button:hover,
-button:focus,
-.button:focus {
+.button:hover{
   cursor: pointer;
-  opacity: 0.6; /* 60% opacity */
-  -webkit-animation: 1s button-grow 1 normal linear;
-          animation: 1s button-grow 1 normal linear;
+  background-color: #f0f0f0;
+  color: #000;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  outline: none;
 }
 
-/* -------------Nav Bar Styling------------- */
-.navigation-list {
-  list-style-type: none;
-}
-
-.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.navigation-list__item--active {
-  text-decoration: none; /* Denotes current page has no underline for link in nav menu */
+button:active,
+.button:active{
+  -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 /* -------------Profile Section Styling (index.html)------------- */
 
 .profile {
-  border: 0 solid magenta; /* border for debugging */
+  border: 0px solid blue; /* border for debugging */
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
   text-align: left;
   max-width: 700px;
   height: 260px; /* use height of profile__portrait */
@@ -230,11 +282,15 @@ button:focus,
 }
 
 .profile__portrait {
+  border: 0px solid red; /* border for debugging */
   float: left;
+  -ms-flex-item-align:center;
+      -ms-grid-row-align:center;
+      align-self:center;
   width: 250px;
   height: 250px;
   margin-right: 40px;
-  border-radius: 50%;
+  border-radius: 15%;
 }
 
 /* Responsive design: Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
@@ -247,7 +303,7 @@ button:focus,
 }
 
 .profile-flexbox {
-  border: 0 solid magenta; /* border for debugging */
+  border: 0px dashed orange; /* border for debugging */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,8 +319,8 @@ button:focus,
 }
 
 .profile-flexbox__item {
-  border: 0 solid magenta; /* border for debugging */
-  margin-bottom: 10px;
+  border: 0px solid green; /* border for debugging */
+  margin-bottom: 15px;
 }
 
 .profile-flexbox__item:first-child {
@@ -275,15 +331,15 @@ button:focus,
 
 /* START: fallback to inline-block if CSS grid unsupported */
 .grid__item {
+  border: 0px dashed blue;
   display: inline-block; /* Will allow grid__item to still display */
   width: 30%;
 }
-
 /* END: Grid fallback */
 
 @supports (display: grid) {
   .grid {
-    border: 0 solid magenta; /* border for debugging */
+    border: 0px dashed blue;
     display: -ms-grid;
     display: grid;
     grid-gap: 20px;
@@ -293,12 +349,13 @@ button:focus,
 }
 
 .grid__item {
-  border: 0 solid magenta; /* border for debugging */
+  border: 0px solid red; /* border for debugging */
   background-color: #d3d3d3;
   padding: 10px;
   width: auto;
   min-height: auto;
   margin: 0;
+  border-radius: 15px;
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   -o-transition: transform 0.2s ease;
@@ -307,8 +364,8 @@ button:focus,
 }
 
 .grid__item:hover {
-  background-color: #add8e6;
-  color: #000080;
+  background-color: #f0f0f0;
+  color: #000;
   -webkit-transform: scale(102%);
       -ms-transform: scale(102%);
           transform: scale(102%);
@@ -318,7 +375,7 @@ button:focus,
 /*
 This flash animation is a modified excerpt from ChatGPT query :
 "I would like to add a hover transition to a grid item in my
-html file that makes the grid item grow slightly land flash."
+html file that makes the grid item grow slightly and flash."
 */
 @-webkit-keyframes flash { /* Reveresed order of opacity so grid__item fades in */
   0% {
@@ -346,17 +403,19 @@ html file that makes the grid item grow slightly land flash."
   display: block;
 }
 
-/* ---------------Responsive Design Section (work.html)--------------- */
-
-/* For screens up to 500 pixel width (smart phones & tablets) */
-
+/* For screens up to 500 pixel width */
 @media all and (max-width: 500px) {
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+
+  h1 {
+    font-size: 20px;
+  }
 }
 
+/* For screens up to 500-750 pixel width */
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
@@ -364,6 +423,7 @@ html file that makes the grid item grow slightly land flash."
   }
 }
 
+/* For screens up to 750+ pixel width */
 @media all and (min-width: 750px) {
   .grid {
     grid-gap: 10px;
@@ -373,15 +433,12 @@ html file that makes the grid item grow slightly land flash."
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
-
-  h1 {
-    font-size: 22px;
-  }
 }
 
 /* --------------- About/Animation Secction (about.html) --------------- */
 
 .about-container {
+  border: 0px dashed orange;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,6 +446,9 @@ html file that makes the grid item grow slightly land flash."
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width:90%;
 }
 
 .about-me-text {
@@ -400,19 +460,14 @@ html file that makes the grid item grow slightly land flash."
       -ms-flex-direction: column;
           flex-direction: column;
   width: 60%;
+  padding-right: 5px;
 }
 
 .about-picture {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  border: 0px solid blue; /* border used for debugging */
+  display: inline-block;
   width: 40%;
-  border: 0 solid magenta; /* border used for debugging */
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .svg-picture {
@@ -427,9 +482,10 @@ html file that makes the grid item grow slightly land flash."
   margin-left: auto;
   max-width: 400px;
   max-height: 400px;
+  border-radius: 15%;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 570px) {
   .about-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -442,7 +498,10 @@ html file that makes the grid item grow slightly land flash."
   }
 
   .about-picture {
-    width: auto;
+    width: 100%;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
   }
 }
 
@@ -584,9 +643,75 @@ html file that makes the grid item grow slightly land flash."
           animation-timing-function: linear;
 }
 
-/* -------------- Error message class (contact.html) -------------- */
+/* -------------- Contact Me (contact.html) -------------- */
 .error-msg {
   color: #ff0000;
   font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
+}
+
+.contact-me{
+  border: 0px solid orange;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width:80%;
+  padding:10px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.input-container {
+  border: 0px solid brown;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  gap:5px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-message-form {
+  visibility: hidden;
+}
+
+.standard-label {
+  border: 0px dashed green;
+  width:20%;
+  text-align:end; /*right justify*/
+  -ms-flex-line-pack: center;
+      align-content: center; /*vertically centered*/
+}
+
+.input-field {
+  border: 0px dashed red;
+  background-color: #f0f0f0;
+  width:80%;
+  line-height: 1.3;
+  border-radius: 3px;
+}
+
+.input-field:focus {
+  background-color: #fff;
+}
+
+.input-textarea {
+  border: 0px dashed blue;
+  background-color: #f0f0f0;
+  width:80%;
+}
+
+.input-textarea:focus {
+  background-color: #fff;
+}
+
+.contact-submit-button {
+  margin-left: auto;
+  margin-right: auto;
 }
