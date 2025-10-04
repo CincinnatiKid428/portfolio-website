@@ -645,9 +645,11 @@ html file that makes the grid item grow slightly and flash."
 
 /* -------------- Contact Me (contact.html) -------------- */
 .error-msg {
+  border: 0px dashed black;
   color: #ff0000;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: inherit;
   font-size: 14px;
+  width:300px;
 }
 
 .contact-me{
@@ -670,11 +672,26 @@ html file that makes the grid item grow slightly and flash."
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 5px;
-  gap:5px;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.input-row {
+  border: 0px dashed lime;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap:5px;
 }
 
 .contact-message-form {
@@ -705,6 +722,7 @@ html file that makes the grid item grow slightly and flash."
   border: 0px dashed blue;
   background-color: #f0f0f0;
   width:80%;
+  height: 100px;
 }
 
 .input-textarea:focus {
