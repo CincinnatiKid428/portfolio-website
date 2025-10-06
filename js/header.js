@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
           <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
         </li>
         <li role="presentation">
-          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
         </li>
         <li role="presentation">
-          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item-right_button">Work</a>
+          <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item-right_button">Contact</a>
         </li>
       </ul>
     </nav>

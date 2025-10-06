@@ -131,7 +131,7 @@
         const phone = document.getElementById("user-phone").value.trim();
         const message = document.getElementById("user-message").value.trim();
 
-        DEBUG_LOG && console.log(`orm Subimt: name[${name}] email[${email}] phone[${phone}] message:`, message);
+        DEBUG_LOG && console.log(`Form Subimt: name[${name}] email[${email}] phone[${phone}] message:`, message);
 
         if (!name || !email || !phone || !message) {
             alert("Please fill out all fields.");

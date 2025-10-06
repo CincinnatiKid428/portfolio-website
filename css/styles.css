@@ -30,6 +30,9 @@ body {
   border: var(--debug-border) dashed red; /* border for debugging  */
   /*background: linear-gradient(var(--color-white), var(--color-background-gradient), var(--color-white));*/
 
+    margin-left: var(--margin-default-value);
+  margin-right: var(--margin-default-value);
+
   /*  Lato font from GoogleFonts  */
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -37,8 +40,7 @@ body {
   /*  Sets the font size, line height, left margin for body element  */
   font-size: 16px;
   line-height: 1.2;
-  margin-left: var(--margin-default-value);
-  margin-right: var(--margin-default-value);
+
 }
 
 /* -------------Link Styling------------- */
@@ -216,15 +218,26 @@ button:active,
   transform: translateY(3px);
 }
 
+@media all and (max-width: 570px) {
+  button,
+.button {
+    font-size: 14px;
+    flex-shrink: 1;
+    height:35px;
+    padding: 0.5em 0.5em;
+  }
+}
+
 /* -------------Profile Section Styling (index.html)------------- */
 
 .profile {
   border: var(--debug-border) solid blue; /* border for debugging */
   display:flex;
   text-align: left;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 700px;
   height: 260px; /* use height of profile__portrait */
-  margin: 0 auto;
 }
 
 .profile__portrait {
@@ -233,7 +246,7 @@ button:active,
   align-self:center;
   width: 250px;
   height: 250px;
-  margin-right: 40px;
+  margin-right: 20px;
   border-radius: 15%;
 }
 
@@ -256,11 +269,206 @@ button:active,
 
 .profile-flexbox__item {
   border: var(--debug-border) solid green; /* border for debugging */
-  margin-bottom: var(--margin-default-value);
+  margin-bottom: 5px;
 }
 
 .profile-flexbox__item:first-child {
   margin-top: 20px;
+}
+
+/* --------------- About/Animation Secction (about.html) --------------- */
+
+.about-container {
+  border: var(--debug-border) dashed orange;
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  width:90%;
+  margin-bottom: 10px;
+}
+
+.about-me-text {
+  display: inline-flex;
+  flex-direction: column;
+  width: 60%;
+  padding-right: 5px;
+}
+
+.about-picture {
+  border: var(--debug-border) solid blue; /* border used for debugging */
+  display: inline-block;
+  width: 40%;
+  margin-top: var(--margin-default-value);
+}
+
+.skill-container {
+  border: var(--debug-border) dashed black;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width:90%;
+}
+
+.skill-row{
+  border: var(--debug-border) solid brown;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  justify-content: center;
+}
+
+.skill-row:nth-child(even) {
+  background-color: #e7e7e7;
+}
+
+.skill-heading-container {
+  border: var(--debug-border) solid blue;
+  display: flex;
+  width:50%;
+  height: 100%;
+  text-align: left;
+  align-items: center; /*v-align*/
+  align-self: top;
+}
+
+.resume-button-container {
+border: var(--debug-border) solid red;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items:center;
+}
+
+.skill-label {
+  border: var(--debug-border) solid cyan;
+  display: flex;
+  width: 40%;
+  justify-content: left;
+  align-items:center;
+}
+
+.skill-value {
+  border: var(--debug-border) solid lime;
+  display: inline-flex;
+  width: 60%;
+  padding-left: 5px;
+  justify-content: left;
+  align-items:center;
+}
+
+.skill-icon-square {
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover; /*force the proper aspect ratio*/
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: transform 0.2s ease;
+}
+
+.skill-icon-square:hover {
+  transform: scale(110%);
+}
+
+.svg-picture {
+  height: auto;
+  width: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 15%;
+}
+
+@media all and (max-width: 570px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-me-text {
+    width: auto;
+  }
+
+  .about-picture {
+    width: 100%;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+/* Sun */
+@keyframes move-sun {
+  from {
+    transform: translate();
+  }
+
+  to {
+    transform: translateY(180px);
+  }
+}
+
+.sun-inner-big,
+.sun-inner-small,
+.sun-border {
+  animation: 10s move-sun infinite alternate ease-in-out;
+}
+
+/* Sky */
+@keyframes sky-color-change { /* Changes color of the sky as sun sets & rises */
+  0% {
+    fill: var(--color-sky-color-change-0);
+  }
+  50% {
+    fill: var(--color-sky-color-change-50);
+  }
+  100% {
+    fill: var(--color-sky-color-change-100);
+  }
+}
+
+.background {
+  animation: 10s sky-color-change infinite alternate linear;
+}
+
+/* Clouds */
+@keyframes cloud-move-left {
+  from {
+    transform: translateX(-220px);
+  }
+
+  to {
+    transform: translateX(520px);
+  }
+}
+
+@keyframes cloud-move-right {
+  from {
+    transform: translateX(-450px);
+  }
+
+  to {
+    transform: translateX(200px);
+  }
+}
+
+.cloud-left {
+  animation-name: cloud-move-left;
+  animation-direction: normal;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.cloud-right {
+  animation-name: cloud-move-right;
+  animation-direction: normal;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 /* -------------Grid Styling (work.html)------------- */
@@ -352,132 +560,6 @@ html file that makes the grid item grow slightly and flash."
   }
 }
 
-/* --------------- About/Animation Secction (about.html) --------------- */
-
-.about-container {
-  border: var(--debug-border) dashed orange;
-  display: flex;
-  flex-direction: row;
-  justify-self: center;
-  width:90%;
-}
-
-.about-me-text {
-  display: inline-flex;
-  flex-direction: column;
-  width: 60%;
-  padding-right: 5px;
-}
-
-.about-picture {
-  border: var(--debug-border) solid blue; /* border used for debugging */
-  display: inline-block;
-  width: 40%;
-  margin-top: var(--margin-default-value);
-}
-
-.svg-picture {
-  height: auto;
-  width: auto;
-  flex-grow: 1;
-  flex-shrink: 1;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 400px;
-  max-height: 400px;
-  border-radius: 15%;
-}
-
-@media all and (max-width: 570px) {
-  .about-container {
-    flex-direction: column;
-  }
-
-  .about-me-text {
-    width: auto;
-  }
-
-  .about-picture {
-    width: 100%;
-    text-align: center;
-    margin-left:auto;
-    margin-right:auto;
-  }
-}
-
-/* Sun */
-@keyframes move-sun {
-  from {
-    transform: translate();
-  }
-
-  to {
-    transform: translateY(180px);
-  }
-}
-
-.sun-inner-big,
-.sun-inner-small,
-.sun-border {
-  animation: 10s move-sun infinite alternate ease-in-out;
-}
-
-/* Sky */
-@keyframes sky-color-change { /* Changes color of the sky as sun sets & rises */
-  0% {
-    fill: var(--color-sky-color-change-0);
-  }
-
-  50% {
-    fill: var(--color-sky-color-change-50);
-  }
-
-  100% {
-    fill: var(--color-sky-color-change-100);
-  }
-}
-
-.background {
-  animation: 10s sky-color-change infinite alternate linear;
-}
-
-/* Clouds */
-@keyframes cloud-move-left {
-  from {
-    transform: translateX(-220px);
-  }
-
-  to {
-    transform: translateX(520px);
-  }
-}
-
-@keyframes cloud-move-right {
-  from {
-    transform: translateX(-450px);
-  }
-
-  to {
-    transform: translateX(200px);
-  }
-}
-
-.cloud-left {
-  animation-name: cloud-move-left;
-  animation-direction: normal;
-  animation-duration: 40s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.cloud-right {
-  animation-name: cloud-move-right;
-  animation-direction: normal;
-  animation-duration: 25s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
 /* -------------- Contact Me (contact.html) -------------- */
 .error-msg {
   border: var(--debug-border) dashed black;
@@ -501,7 +583,7 @@ html file that makes the grid item grow slightly and flash."
   display: flex;
   flex-direction: column;
   padding: 5px;
-  max-width: 400px;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
