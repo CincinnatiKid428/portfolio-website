@@ -777,6 +777,89 @@ html file that makes the grid item grow slightly and flash."
   width:300px;
 }
 
+.sending-email-modal {
+  border: 0px solid red;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed; /* ← Change from absolute to fixed */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Viewport height */
+  width: 100vw;   /* Viewport width */
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* Prevent border from adding to size */
+
+}
+
+.sending-email-modal-content {
+  border: 0px solid lime;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height:50%;
+  aspect-ratio: 1/1;
+  border-radius: 15%;
+  background-color: #fff;
+  z-index: 105;
+  overflow:hidden;
+}
+
+.loading-dots {
+  border: 0px dashed black;
+  width: 100%;
+
+}
+
+.loading-message {
+  border: 0px dashed blue;
+  position: fixed;
+  top: 60%;
+}
+
+@media all and (min-width: 570px) and (max-width: 750px) {
+ .sending-email-modal-content {
+    border: 2px solid yellow;
+    height:300px;
+    width:350px;
+ }
+}
+
+@media all and (min-width: 750px) {
+ .sending-email-modal-content {
+    border: 2px solid red;
+    height:350px;
+    width:400px;
+ }
+}
+
+.set-visible {
+  visibility: visible;
+}
+
+.set-hidden {
+  visibility: hidden;
+}
+
 .contact-me{
   border: 0px solid orange;
   display:-webkit-box;
@@ -817,10 +900,6 @@ html file that makes the grid item grow slightly and flash."
       -ms-flex-direction: row;
           flex-direction: row;
   gap:5px;
-}
-
-.contact-message-form {
-  visibility: hidden;
 }
 
 .standard-label {

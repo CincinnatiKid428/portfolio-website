@@ -134,7 +134,7 @@
         DEBUG_LOG && console.log(`Form Subimt: name[${name}] email[${email}] phone[${phone}] message:`, message);
 
         if (!name || !email || !phone || !message) {
-            alert("Please fill out all fields.");
+            alert("❌ Please fill out all fields.");
             return;
         }
 
@@ -143,6 +143,9 @@
         }
 
         try {
+            const sendModal = document.getElementsById('sending-modal');
+            sendModal.classList.add('set-visible');
+
             const response = await fetch(EMAIL_SERVER_URL, {
                 method: "POST",
                 headers: {
@@ -154,15 +157,18 @@
             const data = await response.json();
 
             if (response.ok) {
-                alert("Your message has been sent!");
+                alert("📬 Your message has been sent!");
                 form.reset();
+                sendModal.classList.remove('set-visible');
             } else {
-                console.error("Email failed:", data.error);
-                alert("There was a problem sending your message. Please try again later.");
+                console.error("❌ Email failed:", data.error);
+                alert("❌ There was a problem sending your message. Please try again later.");
+                sendModal.classList.remove('set-visible');
             }
         } catch (error) {
-            console.error("Request failed:", error);
-            alert("Network error. Please check your connection and try again.");
+            console.error("❌ Request failed:", error);
+            alert("❌ Network error. Please check your connection and try again.");
+            sendModal.classList.remove('set-visible');
         }
     });
 
