@@ -143,7 +143,7 @@
         }
 
         try {
-            const sendModal = document.getElementsById('sending-modal');
+            const sendModal = document.getElementById('sending-modal');
             sendModal.classList.add('set-visible');
 
             const response = await fetch(EMAIL_SERVER_URL, {
