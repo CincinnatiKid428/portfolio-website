@@ -838,7 +838,7 @@ html file that makes the grid item grow slightly and flash."
 
 @media all and (min-width: 570px) and (max-width: 750px) {
  .sending-email-modal-content {
-    border: 2px solid yellow;
+    border: 0px solid yellow;
     height:300px;
     width:350px;
  }
@@ -846,7 +846,7 @@ html file that makes the grid item grow slightly and flash."
 
 @media all and (min-width: 750px) {
  .sending-email-modal-content {
-    border: 2px solid red;
+    border: 0px solid red;
     height:350px;
     width:400px;
  }
