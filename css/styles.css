@@ -643,6 +643,7 @@ html file that makes the grid item grow slightly and flash."
 
 .contact-me{
   border: var(--debug-border) solid orange;
+  background-color: yellow;
   display:flex;
   flex-direction: column;
   width:80%;
