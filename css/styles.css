@@ -286,6 +286,8 @@ button:active,
   display: flex;
   flex-direction: row;
   justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
   width:90%;
   margin-bottom: 10px;
 }
@@ -395,7 +397,6 @@ border: var(--debug-border) solid red;
     flex-direction: column;
     width: 100%;
     justify-self:center;
-    background-color: cyan;
   }
 
   .about-me-text {
@@ -626,7 +627,6 @@ html file that makes the grid item grow slightly and flash."
 .loading-dots {
   border: var(--debug-border) dashed black;
   width: 100%;
-
 }
 
 .loading-message {
@@ -645,11 +645,11 @@ html file that makes the grid item grow slightly and flash."
 
 .contact-me{
   border: var(--debug-border) solid orange;
-  background-color: cyan;
   display:flex;
   flex-direction: column;
   width:80%;
-  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .input-container {
