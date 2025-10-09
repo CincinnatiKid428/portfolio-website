@@ -27,7 +27,7 @@
 
 /*  -------------Body Styling-------------  */
 body {
-  border: var(--debug-border) dashed red; /* border for debugging  */
+  border: var(--debug-border) solid magenta; /* border for debugging  */
   /*background: linear-gradient(var(--color-white), var(--color-background-gradient), var(--color-white));*/
 
   margin-left: var(--margin-default-value);
@@ -393,7 +393,9 @@ border: var(--debug-border) solid red;
 @media all and (max-width: 570px) {
   .about-container {
     flex-direction: column;
-    width: 100%
+    width: 100%;
+    justify-self:center;
+    background-color: cyan;
   }
 
   .about-me-text {
@@ -643,11 +645,11 @@ html file that makes the grid item grow slightly and flash."
 
 .contact-me{
   border: var(--debug-border) solid orange;
-  background-color: yellow;
+  background-color: cyan;
   display:flex;
   flex-direction: column;
   width:80%;
-  align-self: center;
+  justify-self: center;
 }
 
 .input-container {
