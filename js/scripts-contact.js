@@ -1,17 +1,24 @@
 (function () {
     const DEBUG_LOG = false; //controls debug logging
+    const EMAIL_SERVER_URL = 'https://portfolio-email-backend-o66h.onrender.com/contact'; //portfolio-email-backend server enpoint
 
     DEBUG_LOG && console.log('*** Starting IIFE')
     let form = document.querySelector('#contact-form');
     let email = document.querySelector('#user-email');
-    //let phone = document.querySelector('#user-phone');
-    //const phoneRegex = /[0-9][0-9][0-9][\-][0-9][0-9][0-9][\-][0-9][0-9][0-9][0-9]/;
+    let phone = document.querySelector('#user-phone');
+    const phoneRegex = /[0-9][0-9][0-9][\-][0-9][0-9][0-9][\-][0-9][0-9][0-9][0-9]/;
+    let message = document.querySelector('#user-message');
 
+    /**
+     * Shows an error message if an input field value fails validation.
+     * @param {*} input The input field with the validation error
+     * @param {*} message Validation error message
+     */
     function showErrorMessage(input, message) {
         DEBUG_LOG && console.log(' > > |showErrorMessage()|: Starting with input: ' + input + ' |message: ' + message);
 
-        //Get the parent of the element throwing the error
-        let container = input.parentElement;
+        const row = input.parentElement; // This is the .input-row
+        const container = row.parentElement; // This is the .input-container
         DEBUG_LOG && console.log('|showErrorMessage()| input field: ' + input + ' | parent container: ' + container);
 
         //Remove exisiting error if one is already displayed
@@ -32,7 +39,7 @@
             container.appendChild(errorDiv);
             DEBUG_LOG && console.log('> > > |showErrorMessage()| Adding div with error message to ' + input + ' :' + message);
         }
-    }//end showErrorMessage()
+    }
 
 
     //Simple validation of email address entered by user
@@ -71,42 +78,42 @@
         //At this point the email should be valid, clear error msg
         showErrorMessage(email, null);
         return true;
-    }//end validateEmail()
+    }
 
 
     //Simple validation of phone number entered by user
-    /*
-        function validatePhone() {
-    
-            let enteredPhone = phone.value;
-            DEBUG_LOG && console.log('> >|validatePhone()| Started with phone number entered: ' + enteredPhone);
-    
-            //If there was no phone entered
-            if (!enteredPhone) {
-                showErrorMessage(phone, 'Phone number is required');
-                return false;
-            }
-    
-            //Test if phone number entered doet not match regular expression
-            DEBUG_LOG && console.log('|validatePhone()| Phone number matches regular expression:' + phoneRegex.test(enteredPhone));
-            if (!phoneRegex.test(enteredPhone)) {
-                showErrorMessage(phone, 'Phone number is not valid');
-                return false;
-            }
-    
-            //Phone number must be valid at this point, clear error message
-            showErrorMessage(phone, null);
-            return true;
-        }//end validatePhone()
-    */
+
+    function validatePhone() {
+
+        let enteredPhone = phone.value;
+        DEBUG_LOG && console.log('> >|validatePhone()| Started with phone number entered: ' + enteredPhone);
+
+        //If there was no phone entered
+        if (!enteredPhone) {
+            showErrorMessage(phone, 'Phone number is required');
+            return false;
+        }
+
+        //Test if phone number entered doet not match regular expression
+        DEBUG_LOG && console.log('|validatePhone()| Phone number matches regular expression:' + phoneRegex.test(enteredPhone));
+        if (!phoneRegex.test(enteredPhone)) {
+            showErrorMessage(phone, 'Phone number is not valid');
+            return false;
+        }
+
+        //Phone number must be valid at this point, clear error message
+        showErrorMessage(phone, null);
+        return true;
+    }
+
 
     //Validates form by calling for validation of email
     function validateForm() {
         DEBUG_LOG && console.log('> > |validateForm()| Starting validation.');
         let isValidEmail = validateEmail();
-        //let isValidPhone = validatePhone();
-        if (isValidEmail /*&& isValidPhone*/) {
-            DEBUG_LOG && console.log('|validateForm()| Email validation.');
+        let isValidPhone = validatePhone();
+        if (isValidEmail && isValidPhone) {
+            DEBUG_LOG && console.log('|validateForm()| Email/Phone validation passed.');
             return true;
         } else {
             DEBUG_LOG && console.log('|validateForm()| Validations did not pass, isValidEmail = ' + isValidEmail);
@@ -121,10 +128,13 @@
 
         const name = document.getElementById("user-name").value.trim();
         const email = document.getElementById("user-email").value.trim();
+        const phone = document.getElementById("user-phone").value.trim();
         const message = document.getElementById("user-message").value.trim();
 
-        if (!name || !email || !message) {
-            alert("Please fill out all fields.");
+        DEBUG_LOG && console.log(`Form Subimt: name[${name}] email[${email}] phone[${phone}] message:`, message);
+
+        if (!name || !email || !phone || !message) {
+            alert("❌ Please fill out all fields.");
             return;
         }
 
@@ -133,32 +143,38 @@
         }
 
         try {
-            const response = await fetch("https://ixoirgq7bd.execute-api.us-east-1.amazonaws.com/dev/contact", {
+            const sendModal = document.getElementById('sending-modal');
+            sendModal.classList.add('set-visible');
+
+            const response = await fetch(EMAIL_SERVER_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ name, email, message })
+                body: JSON.stringify({ name, email, phone, message })
             });
 
             const data = await response.json();
 
             if (response.ok) {
-                alert("Your message has been sent!");
+                alert("📬 Your message has been sent!");
                 form.reset();
+                sendModal.classList.remove('set-visible');
             } else {
-                console.error("Email failed:", data.error);
-                alert("There was a problem sending your message. Please try again later.");
+                console.error("❌ Email failed:", data.error);
+                alert("❌ There was a problem sending your message. Please try again later.");
+                sendModal.classList.remove('set-visible');
             }
         } catch (error) {
-            console.error("Request failed:", error);
-            alert("Network error. Please check your connection and try again.");
+            console.error("❌ Request failed:", error);
+            alert("❌ Network error. Please check your connection and try again.");
+            sendModal.classList.remove('set-visible');
         }
     });
 
     //Listeners for email/phone field input
     email.addEventListener('input', validateEmail);
-    //phone.addEventListener('input', validatePhone);
+    phone.addEventListener('input', validatePhone);
 
     DEBUG_LOG && console.log('*** Finished IIFE');
 })();//end IIFE()

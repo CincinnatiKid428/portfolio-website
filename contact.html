@@ -14,10 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <!--
+
+    <!--My custom CSS below-->
     <link rel="stylesheet" type="text/css" href="css/style.production.css">
--->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="shortcut icon" href="img/favicon-32x32.png">
 </head>
 
@@ -25,63 +24,60 @@
     <!--Header of page with logo and nav bar-->
     <script src="js/header.js"></script>
 
+    <!--Modal during send backend API call-->
+    <div class="sending-email-modal" id="sending-modal">
+        <div class="sending-email-modal-content">
+            <img class="loading-dots" src="img/loading-dots.gif" />
+            <h2 class="loading-message">Sending message...</h2>
+        </div>
+    </div>
+
     <!--Content pane-->
     <div class="contact-me">
 
         <h1 role="heading">Contact Me</h1>
         <div>If you would like to get in touch with me, feel free to
             <a href="mailto:pweaver.psu03@gmail.com">email me</a>
-            and I will usually be able to respond within 24 hours.
+            or use the form below. I will usually be able to respond within 24 hours.
         </div>
-        <ul>
-            <!--li><a href="tel:5705016717">Tel: 570-501-6717</a></li-->
-            <!--Making Skype the call-to-action link-->
-            <!--li><a href="skype:hello.careerfoundry">Meet Me on Skype</a></li-->
-        </ul>
+        <br>
 
-
-        <form class="contact-message-form" action="" method="post" id="contact-form" role="form">
-
-            <h1 role="heading">Send Me a Message</h1>
+        <!--Form to send user's contact info & message-->
+        <form action="" method="post" id="contact-form" role="form">
 
             <div class="input-container">
-                <label class="standard-label" for="user-name">Name: </label>
-                <input class="input-field" id="user-name" name="name" required>
+                <div class="input-row">
+                    <label class="standard-label" for="user-name">Name: </label>
+                    <input class="input-field" id="user-name" name="name" required>
+                </div>
             </div>
 
             <div class="input-container">
-                <label class="standard-label" for="user-email">Email: </label>
-                <input class="input-field" id="user-email" name="email" required>
+                <div class="input-row">
+                    <label class="standard-label" for="user-email">Email: </label>
+                    <input class="input-field" id="user-email" name="email" required>
+                </div>
             </div>
 
             <div class="input-container">
-                <label class="standard-label" for="user-message">Message: </label>
-                <textarea class="input-textarea" maxlength="240" id="user-message" name="message" required></textarea>
+                <div class="input-row">
+                    <label class="standard-label" for="user-phone">Phone: </label>
+                    <input class="input-field" id="user-phone">
+                </div>
             </div>
+
+            <div class="input-container">
+                <div class="input-row">
+                    <label class="standard-label" for="user-message">Message: </label>
+                    <textarea class="input-textarea" maxlength="240" id="user-message" name="message"
+                        required></textarea>
+                </div>
+            </div>
+
             <div class="input-container">
                 <button class="contact-submit-button" type="submit" role="button">Submit</button>
             </div>
         </form>
-
-        <!--Form to send user's contact info & message
-        <form action="" method="post" id="contact-form" role="form">
-            <div>
-                <label class="standard-label" for="user-email">Email: </label>
-                <input id="user-email">
-            </div>
-            <div>
-                <label class="standard-label" for="user-phone">Telephone: </label>
-                <input id="user-phone">
-            </div>
-
-            <div>
-                <label class="standard-label" for="user-message">Message: </label>
-                <textarea maxlength="240" id="user-message"></textarea>
-            </div>
-
-            <button type="submit" role="button">Submit</button>
-        </form>
--->
     </div>
 
     <!--Footer section with social media links-->
