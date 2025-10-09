@@ -393,8 +393,8 @@ button:active,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
   width:90%;
 }
 

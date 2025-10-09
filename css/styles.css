@@ -309,7 +309,8 @@ button:active,
   border: var(--debug-border) dashed black;
   display: flex;
   flex-direction: column;
-  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
   width:90%;
 }
 
