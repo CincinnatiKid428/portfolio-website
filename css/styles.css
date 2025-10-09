@@ -17,7 +17,7 @@
   --color-sky-color-change-100: #03025f;
   --font-heading-font-weight: 700;
   --margin-default-value: 15px;
-  --debug-border: 1px; /* Increase to see borders for debugging */
+  --debug-border: 0px; /* Increase to see borders for debugging */
   --debug-border-color: #5a535a;
 }
 
