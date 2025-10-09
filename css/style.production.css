@@ -19,7 +19,7 @@ body {
   border: 0px dashed red; /* border for debugging  */
   /*background: linear-gradient(var(--color-white), var(--color-background-gradient), var(--color-white));*/
 
-    margin-left: 15px;
+  margin-left: 15px;
   margin-right: 15px;
 
   /*  Lato font from GoogleFonts  */
@@ -30,6 +30,22 @@ body {
   font-size: 16px;
   line-height: 1.2;
 
+}
+
+/* -------------Headings Styling------------- */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 /* -------------Link Styling------------- */
@@ -193,22 +209,6 @@ footer {
           transform: scale(110%);
 }
 
-/* -------------Headings Styling------------- */
-h1 {
-  font-size: 28px;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: 700;
-}
-
 /* -------------Button Styling------------- */
 
 /* Borders, colors, font (inherit Lato from body rule set), padding, underline  */
@@ -291,8 +291,8 @@ button:active,
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  max-width: 700px;
-  height: 260px; /* use height of profile__portrait */
+  max-width: 100%;
+  height: 80%; /* use height of profile__portrait */
 }
 
 .profile__portrait {
@@ -305,15 +305,6 @@ button:active,
   height: 250px;
   margin-right: 20px;
   border-radius: 15%;
-}
-
-/* Responsive design: Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
-@media all and (max-width: 500px) {
-  .profile__portrait {
-    width: 150px;
-    height: 150px;
-    margin-right: 10px;
-  }
 }
 
 .profile-flexbox {
@@ -339,6 +330,21 @@ button:active,
 
 .profile-flexbox__item:first-child {
   margin-top: 20px;
+}
+
+/* Responsive design: Adjusts profile picture dimensions and margins for screen sizes with max width 500 pixels */
+@media all and (max-width: 570px) {
+  .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile__portrait {
+    width: 60%;
+    height: 60%;
+    margin-right: 0px;
+  }
 }
 
 /* --------------- About/Animation Secction (about.html) --------------- */
@@ -374,7 +380,6 @@ button:active,
   border: 0px solid blue; /* border used for debugging */
   display: inline-block;
   width: 40%;
-  margin-top: 15px;
 }
 
 .skill-container {
@@ -424,6 +429,11 @@ button:active,
   -ms-flex-item-align: top;
       -ms-grid-row-align: top;
       align-self: top;
+}
+
+.tech-skills-text {
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .resume-button-container {
@@ -512,6 +522,7 @@ border: 0px solid red;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%
   }
 
   .about-me-text {
@@ -523,6 +534,17 @@ border: 0px solid red;
     text-align: center;
     margin-left:auto;
     margin-right:auto;
+  }
+
+  .tech-skills-text {
+    font-size: 18px;
+  }
+
+  .skill-value {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 14px;
   }
 }
 
@@ -836,22 +858,6 @@ html file that makes the grid item grow slightly and flash."
   top: 60%;
 }
 
-@media all and (min-width: 570px) and (max-width: 750px) {
- .sending-email-modal-content {
-    border: 0px solid yellow;
-    height:300px;
-    width:350px;
- }
-}
-
-@media all and (min-width: 750px) {
- .sending-email-modal-content {
-    border: 0px solid red;
-    height:350px;
-    width:400px;
- }
-}
-
 .set-visible {
   visibility: visible;
 }
@@ -870,7 +876,6 @@ html file that makes the grid item grow slightly and flash."
       -ms-flex-direction: column;
           flex-direction: column;
   width:80%;
-  padding:10px;
   -ms-grid-column-align: center;
       justify-self: center;
 }
@@ -885,7 +890,7 @@ html file that makes the grid item grow slightly and flash."
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 5px;
-  max-width: 80%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -936,4 +941,26 @@ html file that makes the grid item grow slightly and flash."
 .contact-submit-button {
   margin-left: auto;
   margin-right: auto;
+}
+
+@media all and (max-width: 570px) {
+.contact-me{
+  width:100%;
+}
+}
+
+@media all and (min-width: 570px) and (max-width: 750px) {
+ .sending-email-modal-content {
+    border: 0px solid yellow;
+    height:300px;
+    width:350px;
+ }
+}
+
+@media all and (min-width: 750px) {
+ .sending-email-modal-content {
+    border: 0px solid red;
+    height:350px;
+    width:400px;
+ }
 }
