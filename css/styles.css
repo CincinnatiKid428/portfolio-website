@@ -646,11 +646,11 @@ html file that makes the grid item grow slightly and flash."
   display:flex;
   flex-direction: column;
   width:80%;
-  justify-self: center;
+  align-self: center;
 }
 
 .input-container {
-  border: var(--debug-border) solid brown;
+  border: var(--debug-border) solid purple;
   display: flex;
   flex-direction: column;
   padding: 5px;
