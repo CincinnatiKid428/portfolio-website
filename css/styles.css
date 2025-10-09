@@ -407,6 +407,10 @@ border: var(--debug-border) solid red;
     margin-right:auto;
   }
 
+  .skill-container {
+    width:100%;
+  }
+
   .tech-skills-text {
     font-size: 18px;
   }

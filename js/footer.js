@@ -11,14 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
              alt="GitHub icon hyperlink to my Github page"></a>
       <a href="https://www.linkedin.com/in/philip-weaver-b74576387/" target="_blank">
         <img class="social-media-icons" src="svg/bw_linkedin_icon.svg"
-             alt="LinkedIn icon hyperlink to my LinkedIn page"></a>
-      <a href="https://x.com/PhilipW42823" target="_blank">
-        <img class="social-media-icons" src="svg/bw_x_icon.svg"
-             alt="X icon hyperlink to my X page"></a>
-      <a href="https://medium.com/@bigpaws_9741" target="_blank">
-        <img class="social-media-icons" src="svg/bw_medium_icon.svg"
-             alt="Medium icon hyperlink to my Medium profile"></a>
-             
+             alt="LinkedIn icon hyperlink to my LinkedIn page"></a>          
     </div>
   `;
 
