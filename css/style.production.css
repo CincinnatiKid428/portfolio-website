@@ -16,7 +16,7 @@
 
 /*  -------------Body Styling-------------  */
 body {
-  border: 0px dashed red; /* border for debugging  */
+  border: 1px dashed red; /* border for debugging  */
   /*background: linear-gradient(var(--color-white), var(--color-background-gradient), var(--color-white));*/
 
   margin-left: 15px;
@@ -81,7 +81,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 0px dashed green; /* border for debugging  */
+  border: 1px dashed green; /* border for debugging  */
 
 }
 
@@ -102,7 +102,7 @@ header {
 
 /* -------------Nav Bar Styling------------- */
 .navigation-list {
-  border: 0px dashed blue; /* border for debugging  */
+  border: 1px dashed blue; /* border for debugging  */
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -115,7 +115,7 @@ header {
 }
 
 .navigation-list__item {
-  border: 0px solid orange; /* border for debugging  */
+  border: 1px solid orange; /* border for debugging  */
   display: inline-block;
   -ms-flex-negative: 1;
       flex-shrink: 1;
@@ -156,7 +156,7 @@ header {
 }
 
 .logo-image{
-  border: 0px dashed red; /* border for debugging  */
+  border: 1px dashed red; /* border for debugging  */
   width:30%;
   max-width: 200px;
   max-height: 70px;
@@ -174,7 +174,7 @@ header {
 
 /*  -------------Footer Styling-------------  */
 footer {
-  border: 0px dashed green; /* border for debugging  */
+  border: 1px dashed green; /* border for debugging  */
   font-size: 16px;
   line-height: 1.4;
   margin-bottom: 30px;
@@ -215,7 +215,7 @@ footer {
 button {
   font-family: inherit;
   background-color: #dededede;
-  border: 0px solid #5a535a; /* border for debugging  */
+  border: 1px solid #5a535a; /* border for debugging  */
   display: inline-block;
   padding: 0.5em 1em;
   background-color: #dededede;
@@ -235,7 +235,7 @@ button {
 .button {
   font-family: inherit;
   background-color: #dededede;
-  border: 0px solid #5a535a; /* border for debugging  */
+  border: 1px solid #5a535a; /* border for debugging  */
   display: inline-block;
   padding: 0.5em 1em;
   background-color: #dededede;
@@ -284,7 +284,7 @@ button:active,
 /* -------------Profile Section Styling (index.html)------------- */
 
 .profile {
-  border: 0px solid blue; /* border for debugging */
+  border: 1px solid blue; /* border for debugging */
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -296,7 +296,7 @@ button:active,
 }
 
 .profile__portrait {
-  border: 0px solid red; /* border for debugging */
+  border: 1px solid red; /* border for debugging */
   float: left;
   -ms-flex-item-align:center;
       -ms-grid-row-align:center;
@@ -308,7 +308,7 @@ button:active,
 }
 
 .profile-flexbox {
-  border: 0px dashed orange; /* border for debugging */
+  border: 1px dashed orange; /* border for debugging */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,7 +324,7 @@ button:active,
 }
 
 .profile-flexbox__item {
-  border: 0px solid green; /* border for debugging */
+  border: 1px solid green; /* border for debugging */
   margin-bottom: 5px;
 }
 
@@ -350,7 +350,7 @@ button:active,
 /* --------------- About/Animation Secction (about.html) --------------- */
 
 .about-container {
-  border: 0px dashed orange;
+  border: 1px dashed orange;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,13 +377,13 @@ button:active,
 }
 
 .about-picture {
-  border: 0px solid blue; /* border used for debugging */
+  border: 1px solid blue; /* border used for debugging */
   display: inline-block;
   width: 40%;
 }
 
 .skill-container {
-  border: 0px dashed black;
+  border: 1px dashed black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,7 +397,7 @@ button:active,
 }
 
 .skill-row{
-  border: 0px solid brown;
+  border: 1px solid brown;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,7 +416,7 @@ button:active,
 }
 
 .skill-heading-container {
-  border: 0px solid blue;
+  border: 1px solid blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,7 +437,7 @@ button:active,
 }
 
 .resume-button-container {
-border: 0px solid red;
+border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,7 +451,7 @@ border: 0px solid red;
 }
 
 .skill-label {
-  border: 0px solid cyan;
+  border: 1px solid cyan;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,7 +465,7 @@ border: 0px solid red;
 }
 
 .skill-value {
-  border: 0px solid lime;
+  border: 1px solid lime;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -690,7 +690,7 @@ border: 0px solid red;
 
 /* START: fallback to inline-block if CSS grid unsupported */
 .grid__item {
-  border: 0px dashed blue;
+  border: 1px dashed blue;
   display: inline-block; /* Will allow grid__item to still display */
   width: 30%;
 }
@@ -698,7 +698,7 @@ border: 0px solid red;
 
 @supports (display: grid) {
   .grid {
-    border: 0px dashed blue;
+    border: 1px dashed blue;
     display: -ms-grid;
     display: grid;
     grid-gap: 20px;
@@ -708,7 +708,7 @@ border: 0px solid red;
 }
 
 .grid__item {
-  border: 0px solid red; /* border for debugging */
+  border: 1px solid red; /* border for debugging */
   background-color: #d3d3d3;
   padding: 10px;
   width: auto;
@@ -796,7 +796,7 @@ html file that makes the grid item grow slightly and flash."
 
 /* -------------- Contact Me (contact.html) -------------- */
 .error-msg {
-  border: 0px dashed black;
+  border: 1px dashed black;
   color: #ff0000;
   font-family: inherit;
   font-size: 14px;
@@ -804,7 +804,7 @@ html file that makes the grid item grow slightly and flash."
 }
 
 .sending-email-modal {
-  border: 0px solid red;
+  border: 1px solid red;
   visibility: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,7 +828,7 @@ html file that makes the grid item grow slightly and flash."
 }
 
 .sending-email-modal-content {
-  border: 0px solid lime;
+  border: 1px solid lime;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -851,13 +851,13 @@ html file that makes the grid item grow slightly and flash."
 }
 
 .loading-dots {
-  border: 0px dashed black;
+  border: 1px dashed black;
   width: 100%;
 
 }
 
 .loading-message {
-  border: 0px dashed blue;
+  border: 1px dashed blue;
   position: fixed;
   top: 60%;
 }
@@ -871,7 +871,7 @@ html file that makes the grid item grow slightly and flash."
 }
 
 .contact-me{
-  border: 0px solid orange;
+  border: 1px solid orange;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -885,7 +885,7 @@ html file that makes the grid item grow slightly and flash."
 }
 
 .input-container {
-  border: 0px solid brown;
+  border: 1px solid brown;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -900,7 +900,7 @@ html file that makes the grid item grow slightly and flash."
 }
 
 .input-row {
-  border: 0px dashed lime;
+  border: 1px dashed lime;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -912,7 +912,7 @@ html file that makes the grid item grow slightly and flash."
 }
 
 .standard-label {
-  border: 0px dashed green;
+  border: 1px dashed green;
   width:20%;
   text-align:end; /*right justify*/
   -ms-flex-line-pack: center;
@@ -920,7 +920,7 @@ html file that makes the grid item grow slightly and flash."
 }
 
 .input-field {
-  border: 0px dashed red;
+  border: 1px dashed red;
   background-color: #f0f0f0;
   width:80%;
   line-height: 1.3;
@@ -932,7 +932,7 @@ html file that makes the grid item grow slightly and flash."
 }
 
 .input-textarea {
-  border: 0px dashed blue;
+  border: 1px dashed blue;
   background-color: #f0f0f0;
   width:80%;
   height: 100px;
@@ -955,7 +955,7 @@ html file that makes the grid item grow slightly and flash."
 
 @media all and (min-width: 570px) and (max-width: 750px) {
  .sending-email-modal-content {
-    border: 0px solid yellow;
+    border: 1px solid yellow;
     height:300px;
     width:350px;
  }
@@ -963,7 +963,7 @@ html file that makes the grid item grow slightly and flash."
 
 @media all and (min-width: 750px) {
  .sending-email-modal-content {
-    border: 0px solid red;
+    border: 1px solid red;
     height:350px;
     width:400px;
  }
