@@ -381,7 +381,7 @@ border: var(--debug-border) solid red;
   transform: scale(110%);
 }
 
-.svg-picture {
+.svg-image {
   height: auto;
   width: auto;
   flex-grow: 1;
@@ -425,6 +425,66 @@ border: var(--debug-border) solid red;
   }
 }
 
+/* ------------------ Cat SVG Animations ------------------ */
+/* ----- EYES ----- */
+
+.left-eye {
+  animation-name: move-eye;
+  animation-direction: normal;
+  animation-duration: 12s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.right-eye {
+  animation-name: move-eye;
+  animation-direction: normal;
+  animation-duration: 12s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes move-eye {
+  /* --- move-eye-down-up phase (0%–50%) --- */
+
+  /* down-up */
+  0%, 5%   { transform: translateY(0) translateX(0); }
+  6%       { transform: translateY(5px) translateX(0); }  /* fast down */
+  45%      { transform: translateY(5px) translateX(0); }  /* pause */
+  46%      { transform: translateY(0) translateX(0); }    /* fast up */
+
+  /* --- move-eye-right-left phase (50%–100%) --- */
+
+  50%      { transform: translateY(0) translateX(0); }    /* slight pause */
+  51%      { transform: translateY(0) translateX(5px); }  /* fast right */
+  70%      { transform: translateY(0) translateX(-5px); } /* slow left */
+  71%      { transform: translateY(0) translateX(5px); }  /* fast right */
+  90%      { transform: translateY(0) translateX(-5px); } /* slow left */
+  91%      { transform: translateY(0) translateX(0); }    /* fast center */
+  100%     { transform: translateY(0) translateX(0); }    /* pause center */
+}
+
+.tail {
+  transform-box: view-box;
+  transform-origin: 765px 845px;  /* pivot point 765 745*/
+  animation: wag 1.4s ease-in-out infinite;
+}
+
+@keyframes wag {
+  0%   { transform: rotate(2deg); }
+  50%  { transform: rotate(0); }
+  100% { transform: rotate(2deg); }
+}
+
+.pivot-marker {
+  /*visibility: hidden;*/
+  fill: lime;
+  pointer-events: none;
+}
+
+/* ----------------- Mountains Animations ----------------*/
 /* Sun */
 @keyframes move-sun {
   from {
@@ -726,3 +786,5 @@ html file that makes the grid item grow slightly and flash."
     width:400px;
  }
 }
+
+/* ------------svg-test.html styling----------------------- */

@@ -503,7 +503,7 @@ border: 0px solid red;
           transform: scale(110%);
 }
 
-.svg-picture {
+.svg-image {
   height: auto;
   width: auto;
   -webkit-box-flex: 1;
@@ -556,6 +556,107 @@ border: 0px solid red;
   }
 }
 
+/* ------------------ Cat SVG Animations ------------------ */
+/* ----- EYES ----- */
+
+.left-eye {
+  -webkit-animation-name: move-eye;
+          animation-name: move-eye;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.right-eye {
+  -webkit-animation-name: move-eye;
+          animation-name: move-eye;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes move-eye {
+  /* --- move-eye-down-up phase (0%–50%) --- */
+
+  /* down-up */
+  0%, 5%   { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); }
+  6%       { -webkit-transform: translateY(5px) translateX(0); transform: translateY(5px) translateX(0); }  /* fast down */
+  45%      { -webkit-transform: translateY(5px) translateX(0); transform: translateY(5px) translateX(0); }  /* pause */
+  46%      { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); }    /* fast up */
+
+  /* --- move-eye-right-left phase (50%–100%) --- */
+
+  50%      { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); }    /* slight pause */
+  51%      { -webkit-transform: translateY(0) translateX(5px); transform: translateY(0) translateX(5px); }  /* fast right */
+  70%      { -webkit-transform: translateY(0) translateX(-5px); transform: translateY(0) translateX(-5px); } /* slow left */
+  71%      { -webkit-transform: translateY(0) translateX(5px); transform: translateY(0) translateX(5px); }  /* fast right */
+  90%      { -webkit-transform: translateY(0) translateX(-5px); transform: translateY(0) translateX(-5px); } /* slow left */
+  91%      { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); }    /* fast center */
+  100%     { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); }    /* pause center */
+}
+
+@keyframes move-eye {
+  /* --- move-eye-down-up phase (0%–50%) --- */
+
+  /* down-up */
+  0%, 5%   { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); }
+  6%       { -webkit-transform: translateY(5px) translateX(0); transform: translateY(5px) translateX(0); }  /* fast down */
+  45%      { -webkit-transform: translateY(5px) translateX(0); transform: translateY(5px) translateX(0); }  /* pause */
+  46%      { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); }    /* fast up */
+
+  /* --- move-eye-right-left phase (50%–100%) --- */
+
+  50%      { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); }    /* slight pause */
+  51%      { -webkit-transform: translateY(0) translateX(5px); transform: translateY(0) translateX(5px); }  /* fast right */
+  70%      { -webkit-transform: translateY(0) translateX(-5px); transform: translateY(0) translateX(-5px); } /* slow left */
+  71%      { -webkit-transform: translateY(0) translateX(5px); transform: translateY(0) translateX(5px); }  /* fast right */
+  90%      { -webkit-transform: translateY(0) translateX(-5px); transform: translateY(0) translateX(-5px); } /* slow left */
+  91%      { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); }    /* fast center */
+  100%     { -webkit-transform: translateY(0) translateX(0); transform: translateY(0) translateX(0); }    /* pause center */
+}
+
+.tail {
+  transform-box: view-box;
+  -webkit-transform-origin: 765px 845px;
+      -ms-transform-origin: 765px 845px;
+          transform-origin: 765px 845px;  /* pivot point 765 745*/
+  -webkit-animation: wag 1.4s ease-in-out infinite;
+          animation: wag 1.4s ease-in-out infinite;
+}
+
+@-webkit-keyframes wag {
+  0%   { -webkit-transform: rotate(2deg); transform: rotate(2deg); }
+  50%  { -webkit-transform: rotate(0); transform: rotate(0); }
+  100% { -webkit-transform: rotate(2deg); transform: rotate(2deg); }
+}
+
+@keyframes wag {
+  0%   { -webkit-transform: rotate(2deg); transform: rotate(2deg); }
+  50%  { -webkit-transform: rotate(0); transform: rotate(0); }
+  100% { -webkit-transform: rotate(2deg); transform: rotate(2deg); }
+}
+
+.pivot-marker {
+  /*visibility: hidden;*/
+  fill: lime;
+  pointer-events: none;
+}
+
+/* ----------------- Mountains Animations ----------------*/
 /* Sun */
 @-webkit-keyframes move-sun {
   from {
