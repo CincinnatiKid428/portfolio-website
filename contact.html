@@ -21,70 +21,74 @@
 </head>
 
 <body>
+
     <!--Header of page with logo and nav bar-->
     <script src="js/header.js"></script>
 
-    <!--Modal during send backend API call-->
-    <div class="sending-email-modal" id="sending-modal">
-        <div class="sending-email-modal-content">
-            <img class="loading-dots" src="img/loading-dots.gif" />
-            <h2 class="loading-message">Sending message...</h2>
+    <div class="page-container">
+
+        <!--Modal during send backend API call-->
+        <div class="sending-email-modal" id="sending-modal">
+            <div class="sending-email-modal-content">
+                <img class="loading-dots" src="img/loading-dots.gif" />
+                <h2 class="loading-message">Sending message...</h2>
+            </div>
         </div>
-    </div>
 
-    <!--Content pane-->
-    <div class="contact-me">
+        <!--Content pane-->
+        <div class="contact-me">
 
-        <h1 role="heading">Contact Me</h1>
-        <div>If you would like to get in touch with me, feel free to
-            <a href="mailto:pweaver.psu03@gmail.com">email me</a>
-            or use the form below. I will usually be able to respond within 24 hours.
+            <h1 role="heading">Contact Me</h1>
+            <div>If you would like to get in touch with me, feel free to
+                <a href="mailto:pweaver.psu03@gmail.com">email me</a>
+                or use the form below. I will usually be able to respond within 24 hours.
+            </div>
+            <br>
+
+            <!--Form to send user's contact info & message-->
+            <form action="" method="post" id="contact-form" role="form">
+
+                <div class="input-container">
+                    <div class="input-row">
+                        <label class="standard-label" for="user-name">Name: </label>
+                        <input class="input-field" id="user-name" name="name" required>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-row">
+                        <label class="standard-label" for="user-email">Email: </label>
+                        <input class="input-field" id="user-email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-row">
+                        <label class="standard-label" for="user-phone">Phone: </label>
+                        <input class="input-field" id="user-phone">
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-row">
+                        <label class="standard-label" for="user-message">Message: </label>
+                        <textarea class="input-textarea" maxlength="240" id="user-message" name="message"
+                            required></textarea>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <button class="contact-submit-button" type="submit" role="button">Submit</button>
+                </div>
+            </form>
         </div>
-        <br>
 
-        <!--Form to send user's contact info & message-->
-        <form action="" method="post" id="contact-form" role="form">
+        <!--Footer section with social media links-->
+        <script src="js/footer.js"></script>
 
-            <div class="input-container">
-                <div class="input-row">
-                    <label class="standard-label" for="user-name">Name: </label>
-                    <input class="input-field" id="user-name" name="name" required>
-                </div>
-            </div>
-
-            <div class="input-container">
-                <div class="input-row">
-                    <label class="standard-label" for="user-email">Email: </label>
-                    <input class="input-field" id="user-email" name="email" required>
-                </div>
-            </div>
-
-            <div class="input-container">
-                <div class="input-row">
-                    <label class="standard-label" for="user-phone">Phone: </label>
-                    <input class="input-field" id="user-phone">
-                </div>
-            </div>
-
-            <div class="input-container">
-                <div class="input-row">
-                    <label class="standard-label" for="user-message">Message: </label>
-                    <textarea class="input-textarea" maxlength="240" id="user-message" name="message"
-                        required></textarea>
-                </div>
-            </div>
-
-            <div class="input-container">
-                <button class="contact-submit-button" type="submit" role="button">Submit</button>
-            </div>
-        </form>
+        <script src="js/scripts-contact.js"></script>
+        <!--script src="js/tota11y.min.js"></script-->
     </div>
-
-    <!--Footer section with social media links-->
-    <script src="js/footer.js"></script>
-
-    <script src="js/scripts-contact.js"></script>
-    <!--script src="js/tota11y.min.js"></script-->
 </body>
 
 </html>

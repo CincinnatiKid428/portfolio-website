@@ -24,158 +24,172 @@
 </head>
 
 <body>
+
     <!--Header of page with logo and nav bar-->
     <script src="js/header.js"></script>
 
-    <h1>My Work</h1>
+    <div class="page-container">
 
-    <!-- Content section of page -->
-    <section>
-        <div class="grid">
+        <h1>My Work</h1>
 
-            <div class="grid__item">
-                <h2>Simmer</h2>
-                <img class="grid__item_img" src="img/simmer-screenshot1.png" />
-                <p>
-                    Beginning as an intro to Python and command line applications, this project was to take that
-                    functionality
-                    and expand it into a Django web application. It allows users to create accounts and
-                    interact with a recipe database where they can view/add recipes and search recipes by ingredients.
-                </p>
-                <p>
-                    Application built using the Django framework, Python, HTML, CSS, JavaScript. Docker was used to
-                    create a MySQL
-                    database for the local environment, <a href="https://neon.tech/">Neon</a> hosting for the live
-                    Postgres databse.
-                    Application hosting using MS Azure, as well as Azure Blob storage for images.
-                </p>
-                <a href="https://recipes-pweaver.azurewebsites.net/" target="_blank">Live
-                    Application</a><br>
-                <a href="https://github.com/CincinnatiKid428/recipe-app" target="_blank">Code
-                    Repository</a>
+        <!-- Content section of page -->
+        <section>
+            <div class="grid">
+
+                <div class="grid__item">
+                    <h2>Simmer</h2>
+                    <img class="grid__item_img" src="img/simmer-screenshot1.png" />
+                    <p>
+                        Beginning as an intro to Python and command line applications, this project was to take that
+                        functionality
+                        and expand it into a Django web application. It allows users to create accounts and
+                        interact with a recipe database where they can view/add recipes and search recipes by
+                        ingredients.
+                    </p>
+                    <p>
+                        Application built using the Django framework, Python, HTML, CSS, JavaScript. Docker was used to
+                        create a MySQL
+                        database for the local environment, <a href="https://neon.tech/">Neon</a> hosting for the live
+                        Postgres databse.
+                        Application hosting using MS Azure, as well as Azure Blob storage for images.
+                    </p>
+                    <a href="https://recipes-pweaver.azurewebsites.net/" target="_blank">Live
+                        Application</a><br>
+                    <a href="https://github.com/CincinnatiKid428/recipe-app" target="_blank">Code
+                        Repository</a>
+                </div>
+
+                <div class="grid__item">
+                    <h2>Matinee - Angular Rewrite</h2>
+                    <img class="grid__item_img" src="img/matinee-angular-screenshot1.png" />
+                    <p>
+                        This project was to rewrite the Matinee application (React) in Angular and make use of Angular
+                        Material in the project. The backend API application would remain the same as the React Matinee
+                        application and the Angular Matinee would make use of it.
+                    </p>
+                    <p>
+                        Application built with Angular, Angular Material, TypeScript. A Kanban board on Trello was used
+                        and cards tracked tasks to complete for components, documentation and portfolio updates for this
+                        project.
+                    </p>
+                    <a href="https://cincinnatikid428.github.io/myFlix-Angular-client" target="_blank">Live
+                        Application</a><br>
+                    <a href="https://github.com/CincinnatiKid428/myFlix-Angular-client/tree/main" target="_blank">Code
+                        Repository</a>
+                </div>
+
+                <div class="grid__item">
+                    <h2>Chatty Catty</h2>
+                    <img class="grid__item_img" src="img/chat-app-screenshot1.png" />
+                    <p>
+                        This project involved building a native chat application for mobile devices using React Native.
+                        The
+                        application allows users to send text chats, images and share their location. Chat history
+                        will be preserved in an online database as well as on the device for limited
+                        offline use.
+                    </p>
+                    <p>
+                        Applicaiton built using React Native, React Native GiftedChat, Expo v53 (build automation),
+                        Google Firebase Authentication, Google Firestore Database
+                    </p>
+                    <p>
+                        Expo Go v53 used for testing on mobile devices.
+                    </p>
+                    <a href="vid/chat-app-native-demo.MP4" target="_blank">App Demo</a><br>
+                    <a href="https://github.com/CincinnatiKid428/chat-app-native" target="_blank">Code Repository</a>
+                </div>
+
+                <div class="grid__item">
+                    <h2>Meet App</h2>
+                    <img class="grid__item_img" src="img/meet-screenshot1.png" />
+                    <p>
+                        This project was aimed at building a serverless, progressive web application with React
+                        using a test-driven development approach. The application uses the Google Calendar API
+                        to fetch upcoming events. Google OAuthentication used to gain authorization for the application.
+                        Domains registered with Google for improved search results for Meet application and GitHub
+                        repository.
+                    </p>
+                    <p>
+                        Application built with React, Serverless/AWS Lambda functions (authorization/fetch), Recharts
+                        (visualizations), Vite (build automation)
+                    </p>
+                    <p>
+                        Testing with Jest, Jest-Cucumber, Puppetteer
+                    </p>
+                    <a href="https://meet-sand.vercel.app" target="_blank">Live Application</a><br>
+                    <a href="https://github.com/CincinnatiKid428/meet" target="_blank">Code Repository</a>
+                </div>
+
+                <div class="grid__item">
+                    <h2>Matinee</h2>
+                    <img class="grid__item_img" src="img/matinee-screenshot1.png" />
+                    <p>
+                        The project consists of two parts: a backend API application which implements a RESTful API and
+                        a
+                        client frontend that accesses it. The application deals with movies and users can register and
+                        login
+                        to their account to view a movie list, view movie details, add/remove movies from a list of
+                        favorites, update account information and delete their account if desired.
+                    </p>
+                    <p>
+                        API backend built using Javascript, Node.js, Express, MongoDB, Postman (testing) &
+                        Heroku/AWS-EC2
+                        (hosting).
+                    </p>
+                    <p>
+                        Frontend built using Javascript, React, React-Bootstrap, Redux, Parcel/gh-pages (build
+                        automation)
+                    </p>
+                    <a href="https://cincinnatikid428.github.io/myFlix-client" target="_blank">Live Application</a><br>
+                    <a href="https://github.com/CincinnatiKid428/movie_api" target="_blank">Backend Code
+                        Repository</a><br>
+                    <a href="https://github.com/CincinnatiKid428/myFlix-client" target="_blank">Frontend Code
+                        Repository</a>
+                </div>
+
+
+
+                <div class="grid__item">
+                    <h2>Pokedex App</h2>
+                    <img class="grid__item_img" src="img/pokedex-screenshot1.png" />
+                    <p>
+                        A simple web application that loads data from an external <a
+                            href="https://pokeapi.co/api/v2/pokemon/">API</a>
+                        and enables the viewing of basic data points about
+                        a Pokémon selected from a listing. jQuery and Bootstrap were used for page layout and
+                        manipulation
+                        of elements.
+                    </p>
+                    <p>
+                        Application built using HTML, CSS and JavaScript (Bootstrap, jQuery)
+                    </p>
+                    <a href="https://cincinnatikid428.github.io/pokedex-app/index.html" target="_blank">Live
+                        Application</a><br>
+                    <a href="https://github.com/CincinnatiKid428/pokedex-app" target="_blank">Code Repository</a>
+                </div>
+
+                <div class="grid__item">
+                    <h2>Project Portfolio</h2>
+                    <img class="grid__item_img" src="img/portfolio-screenshot1.png" />
+                    <p>
+                        This project was to create a website that would be used as an online portfolio to showcase other
+                        projects I completed throughout my courses at Career Foundry.
+                        It was to be built using HTML/CSS and introduce SVG images as well as customizing/animating the
+                        SVG.
+                        I learned about and used a Kanban board to manage and track my goals throughout the portfolio
+                        development project as well.
+                    </p>
+                    <a href="https://github.com/CincinnatiKid428/portfolio-website" target="_blank">Code Repository</a>
+                </div>
+
             </div>
+        </section>
 
-            <div class="grid__item">
-                <h2>Matinee - Angular Rewrite</h2>
-                <img class="grid__item_img" src="img/matinee-angular-screenshot1.png" />
-                <p>
-                    This project was to rewrite the Matinee application (React) in Angular and make use of Angular
-                    Material in the project. The backend API application would remain the same as the React Matinee
-                    application and the Angular Matinee would make use of it.
-                </p>
-                <p>
-                    Application built with Angular, Angular Material, TypeScript. A Kanban board on Trello was used
-                    and cards tracked tasks to complete for components, documentation and portfolio updates for this
-                    project.
-                </p>
-                <a href="https://cincinnatikid428.github.io/myFlix-Angular-client" target="_blank">Live
-                    Application</a><br>
-                <a href="https://github.com/CincinnatiKid428/myFlix-Angular-client/tree/main" target="_blank">Code
-                    Repository</a>
-            </div>
+        <!--Footer section with social media links-->
+        <script src="js/footer.js"></script>
 
-            <div class="grid__item">
-                <h2>Chatty Catty</h2>
-                <img class="grid__item_img" src="img/chat-app-screenshot1.png" />
-                <p>
-                    This project involved building a native chat application for mobile devices using React Native. The
-                    application allows users to send text chats, images and share their location. Chat history
-                    will be preserved in an online database as well as on the device for limited
-                    offline use.
-                </p>
-                <p>
-                    Applicaiton built using React Native, React Native GiftedChat, Expo v53 (build automation),
-                    Google Firebase Authentication, Google Firestore Database
-                </p>
-                <p>
-                    Expo Go v53 used for testing on mobile devices.
-                </p>
-                <a href="vid/chat-app-native-demo.MP4" target="_blank">App Demo</a><br>
-                <a href="https://github.com/CincinnatiKid428/chat-app-native" target="_blank">Code Repository</a>
-            </div>
-
-            <div class="grid__item">
-                <h2>Meet App</h2>
-                <img class="grid__item_img" src="img/meet-screenshot1.png" />
-                <p>
-                    This project was aimed at building a serverless, progressive web application with React
-                    using a test-driven development approach. The application uses the Google Calendar API
-                    to fetch upcoming events. Google OAuthentication used to gain authorization for the application.
-                    Domains registered with Google for improved search results for Meet application and GitHub
-                    repository.
-                </p>
-                <p>
-                    Application built with React, Serverless/AWS Lambda functions (authorization/fetch), Recharts
-                    (visualizations), Vite (build automation)
-                </p>
-                <p>
-                    Testing with Jest, Jest-Cucumber, Puppetteer
-                </p>
-                <a href="https://meet-sand.vercel.app" target="_blank">Live Application</a><br>
-                <a href="https://github.com/CincinnatiKid428/meet" target="_blank">Code Repository</a>
-            </div>
-
-            <div class="grid__item">
-                <h2>Matinee</h2>
-                <img class="grid__item_img" src="img/matinee-screenshot1.png" />
-                <p>
-                    The project consists of two parts: a backend API application which implements a RESTful API and a
-                    client frontend that accesses it. The application deals with movies and users can register and login
-                    to their account to view a movie list, view movie details, add/remove movies from a list of
-                    favorites, update account information and delete their account if desired.
-                </p>
-                <p>
-                    API backend built using Javascript, Node.js, Express, MongoDB, Postman (testing) & Heroku/AWS-EC2
-                    (hosting).
-                </p>
-                <p>
-                    Frontend built using Javascript, React, React-Bootstrap, Redux, Parcel/gh-pages (build automation)
-                </p>
-                <a href="https://cincinnatikid428.github.io/myFlix-client" target="_blank">Live Application</a><br>
-                <a href="https://github.com/CincinnatiKid428/movie_api" target="_blank">Backend Code Repository</a><br>
-                <a href="https://github.com/CincinnatiKid428/myFlix-client" target="_blank">Frontend Code Repository</a>
-            </div>
-
-
-
-            <div class="grid__item">
-                <h2>Pokedex App</h2>
-                <img class="grid__item_img" src="img/pokedex-screenshot1.png" />
-                <p>
-                    A simple web application that loads data from an external <a
-                        href="https://pokeapi.co/api/v2/pokemon/">API</a>
-                    and enables the viewing of basic data points about
-                    a Pokémon selected from a listing. jQuery and Bootstrap were used for page layout and manipulation
-                    of elements.
-                </p>
-                <p>
-                    Application built using HTML, CSS and JavaScript (Bootstrap, jQuery)
-                </p>
-                <a href="https://cincinnatikid428.github.io/pokedex-app/index.html" target="_blank">Live
-                    Application</a><br>
-                <a href="https://github.com/CincinnatiKid428/pokedex-app" target="_blank">Code Repository</a>
-            </div>
-
-            <div class="grid__item">
-                <h2>Project Portfolio</h2>
-                <img class="grid__item_img" src="img/portfolio-screenshot1.png" />
-                <p>
-                    This project was to create a website that would be used as an online portfolio to showcase other
-                    projects I completed throughout my courses at Career Foundry.
-                    It was to be built using HTML/CSS and introduce SVG images as well as customizing/animating the SVG.
-                    I learned about and used a Kanban board to manage and track my goals throughout the portfolio
-                    development project as well.
-                </p>
-                <a href="https://github.com/CincinnatiKid428/portfolio-website" target="_blank">Code Repository</a>
-            </div>
-
-        </div>
-    </section>
-
-    <!--Footer section with social media links-->
-    <script src="js/footer.js"></script>
-
-    <!--script src="js/tota11y.min.js"></script-->
+        <!--script src="js/tota11y.min.js"></script-->
+    </div>
 </body>
 
 </html>

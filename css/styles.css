@@ -30,8 +30,7 @@ body {
   border: var(--debug-border) solid magenta; /* border for debugging  */
   /*background: linear-gradient(var(--color-white), var(--color-background-gradient), var(--color-white));*/
 
-  margin-left: var(--margin-default-value);
-  margin-right: var(--margin-default-value);
+
 
   /*  Lato font from GoogleFonts  */
   font-family: 'Lato', sans-serif;
@@ -41,6 +40,13 @@ body {
   font-size: 16px;
   line-height: 1.2;
 
+}
+
+.page-container{
+  border: var(--debug-border) solid blue; /* border for debugging  */
+  margin-left: var(--margin-default-value);
+  margin-right: var(--margin-default-value);
+  margin-top: 90px;
 }
 
 /* -------------Headings Styling------------- */
@@ -77,25 +83,97 @@ a:active {
 /*  -------------Header Styling-------------  */
 header {
   line-height: 1.4;
-  margin-bottom: 30px;
 }
 
 .page-header {
-  display: flex; /*  flexbox  */
-  width: 100%;
-  align-items: center;
   border: var(--debug-border) dashed green; /* border for debugging  */
-
+  background-color: #FFF;
+  display: flex; /*  flexbox  */
+  position:fixed;
+  top: 0;
+  left: var(--margin-default-value);
+  right: var(--margin-default-value);
+  width: auto;
+  align-items: center;
 }
 
 .page-header__item {
-  /*flex: 0 1 200px;   flex-grow flex-shrink flex-basis  */
+  border: var(--debug-border) solid cyan; /* border for debugging  */
   flex-shrink: 1;
   flex-grow: 0;
+  min-width: 0;
 }
+
 
 .page-header__item:last-child {
   flex-grow: 1;
+}
+
+.squares-container {
+  border: var(--debug-border) solid limegreen; /* border for debugging  */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  gap: 1px;
+}
+
+.squares-container-row {
+  display: flex;
+  gap: 1px;
+}
+
+.square {
+  /*border: var(--debug-border) solid black; /* border for debugging  */
+  background-color: #dededede;
+  aspect-ratio: 1 1;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  /*animation: 0.6s square-flash infinite normal;*/
+}
+
+.sq-top-left {
+  animation: 4s sq-top-left-flash infinite normal;
+  /*animation-delay: 0.8s;*/
+}
+
+.sq-top-right {
+  animation: 4s sq-top-right-flash infinite normal;
+  /*animation-delay: 1.2s;*/
+}
+
+.sq-bot-left {
+  animation: 4s sq-bot-left-flash infinite normal;
+  /*animation-delay: 1.6s;*/
+}
+
+.sq-bot-right {
+  animation: 4s sq-bot-right-flash infinite normal;
+  /*animation-delay: 2.0s;*/
+}
+  
+@keyframes sq-top-left-flash {
+  0%, 9% {opacity: 1;}
+  10% {opacity: 0;}
+  40%, 100% {opacity: 1;}
+}
+@keyframes sq-top-right-flash {
+  0%, 19% {opacity: 1;}
+  20% {opacity: 0;}
+  50%, 100% {opacity: 1;}
+}
+@keyframes sq-bot-left-flash {
+  0%, 29% {opacity: 1;}
+  30% {opacity: 0;}
+  60%, 100% {opacity: 1;}
+}
+@keyframes sq-bot-right-flash {
+  0%, 39% {opacity: 1;}
+  40% {opacity: 0;}
+  70%, 100% {opacity: 1;}
 }
 
 /* -------------Nav Bar Styling------------- */
@@ -349,6 +427,10 @@ border: var(--debug-border) solid red;
   align-items:center;
 }
 
+.resume-button {
+  visibility: hidden;
+}
+
 .skill-label {
   border: var(--debug-border) solid cyan;
   display: flex;
@@ -479,81 +561,9 @@ border: var(--debug-border) solid red;
 }
 
 .pivot-marker {
-  /*visibility: hidden;*/
+  visibility: hidden;
   fill: lime;
   pointer-events: none;
-}
-
-/* ----------------- Mountains Animations ----------------*/
-/* Sun */
-@keyframes move-sun {
-  from {
-    transform: translate();
-  }
-
-  to {
-    transform: translateY(180px);
-  }
-}
-
-.sun-inner-big,
-.sun-inner-small,
-.sun-border {
-  animation: 10s move-sun infinite alternate ease-in-out;
-}
-
-/* Sky */
-@keyframes sky-color-change { /* Changes color of the sky as sun sets & rises */
-  0% {
-    fill: var(--color-sky-color-change-0);
-  }
-  50% {
-    fill: var(--color-sky-color-change-50);
-  }
-  100% {
-    fill: var(--color-sky-color-change-100);
-  }
-}
-
-.background {
-  animation: 10s sky-color-change infinite alternate linear;
-}
-
-/* Clouds */
-@keyframes cloud-move-left {
-  from {
-    transform: translateX(-220px);
-  }
-
-  to {
-    transform: translateX(520px);
-  }
-}
-
-@keyframes cloud-move-right {
-  from {
-    transform: translateX(-450px);
-  }
-
-  to {
-    transform: translateX(200px);
-  }
-}
-
-.cloud-left {
-  animation-name: cloud-move-left;
-  animation-direction: normal;
-  animation-duration: 40s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.cloud-right {
-  animation-name: cloud-move-right;
-  animation-direction: normal;
-  animation-duration: 25s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
 /* -------------Grid Styling (work.html)------------- */
