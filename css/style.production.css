@@ -145,26 +145,26 @@ header {
 }
 
 .sq-top-left {
-  -webkit-animation: 4s sq-top-left-flash infinite normal;
-          animation: 4s sq-top-left-flash infinite normal;
+  -webkit-animation: 2s sq-top-left-flash infinite normal;
+          animation: 2s sq-top-left-flash infinite normal;
   /*animation-delay: 0.8s;*/
 }
 
 .sq-top-right {
-  -webkit-animation: 4s sq-top-right-flash infinite normal;
-          animation: 4s sq-top-right-flash infinite normal;
+  -webkit-animation: 2s sq-top-right-flash infinite normal;
+          animation: 2s sq-top-right-flash infinite normal;
   /*animation-delay: 1.2s;*/
 }
 
 .sq-bot-left {
-  -webkit-animation: 4s sq-bot-left-flash infinite normal;
-          animation: 4s sq-bot-left-flash infinite normal;
+  -webkit-animation: 2s sq-bot-left-flash infinite normal;
+          animation: 2s sq-bot-left-flash infinite normal;
   /*animation-delay: 1.6s;*/
 }
 
 .sq-bot-right {
-  -webkit-animation: 4s sq-bot-right-flash infinite normal;
-          animation: 4s sq-bot-right-flash infinite normal;
+  -webkit-animation: 2s sq-bot-right-flash infinite normal;
+          animation: 2s sq-bot-right-flash infinite normal;
   /*animation-delay: 2.0s;*/
 }
   
