@@ -477,6 +477,7 @@ button:active,
 }
 
 .about-me-text {
+  border: 0px solid purple; /* border used for debugging */
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -492,6 +493,8 @@ button:active,
   border: 0px solid blue; /* border used for debugging */
   display: inline-block;
   width: 40%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .skill-container {
