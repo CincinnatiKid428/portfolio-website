@@ -95,6 +95,7 @@ header {
   right: var(--margin-default-value);
   width: auto;
   align-items: center;
+  z-index: 1000;
 }
 
 .page-header__item {
@@ -569,7 +570,7 @@ border: var(--debug-border) solid red;
   pointer-events: none;
 }
 
-/* -------------Grid Styling (work.html)------------- */
+/* ------------- work.html Grid Styling ------------- */
 
 /* START: fallback to inline-block if CSS grid unsupported */
 .grid__item {
@@ -602,8 +603,9 @@ border: var(--debug-border) solid red;
 .grid__item:hover {
   background-color: var(--color-grid__item-hover-background);
   color: var(--color-grid__item-hover-text-color);
-  transform: scale(102%);
-  /*animation: 0.5s flash 1 normal; remove or keep? preference? */
+  /*border: 1px solid black;*/
+  /*transform: scale(102%);*/
+  /*animation: 0.5s flash 1 normal; remove or keep?*/
 }
 
 /*

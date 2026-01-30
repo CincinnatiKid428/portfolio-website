@@ -92,6 +92,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1000;
 }
 
 .page-header__item {
@@ -773,7 +774,7 @@ border: 0px solid red;
   pointer-events: none;
 }
 
-/* -------------Grid Styling (work.html)------------- */
+/* ------------- work.html Grid Styling ------------- */
 
 /* START: fallback to inline-block if CSS grid unsupported */
 .grid__item {
@@ -812,10 +813,9 @@ border: 0px solid red;
 .grid__item:hover {
   background-color: #f0f0f0;
   color: #000;
-  -webkit-transform: scale(102%);
-      -ms-transform: scale(102%);
-          transform: scale(102%);
-  /*animation: 0.5s flash 1 normal; remove or keep? preference? */
+  /*border: 1px solid black;*/
+  /*transform: scale(102%);*/
+  /*animation: 0.5s flash 1 normal; remove or keep?*/
 }
 
 /*
