@@ -1,6 +1,8 @@
 (function () {
-    const DEBUG_LOG = false; //controls debug logging
-    const EMAIL_SERVER_URL = 'https://portfolio-email-backend-o66h.onrender.com/contact'; //portfolio-email-backend server enpoint
+    const DEBUG_LOG = false; //controls debug logging in this file
+
+    //portfolio-email-backend server enpoint hosted on Render.com (email sent using Resend API)
+    const EMAIL_SERVER_URL = 'https://portfolio-email-backend-o66h.onrender.com/contact';
 
     DEBUG_LOG && console.log('*** Starting IIFE')
     let form = document.querySelector('#contact-form');
@@ -42,7 +44,10 @@
     }
 
 
-    //Simple validation of email address entered by user
+    /**
+     * Simple validation of email address entered by user.
+     * @returns {boolean} True if email address is valid
+     */
     function validateEmail() {
         DEBUG_LOG && console.log('> > |validateEmail()| Started');
         enteredEmail = email.value;
@@ -65,7 +70,6 @@
             return false;
         }
 
-
         //Make sure email has a . after the @ and must be at least the 4th character but not the last character
         let hasDot = ((dotIndex > 2) && (dotIndex < enteredEmail.length - 1));
         DEBUG_LOG && console.log('|validateEmail()| hasDot is : ' + hasDot);
@@ -81,8 +85,10 @@
     }
 
 
-    //Simple validation of phone number entered by user
-
+    /**
+     * Simple validation of phone number entered by user.
+     * @returns {boolean} True if phone number is valid
+     */
     function validatePhone() {
 
         let enteredPhone = phone.value;
@@ -107,7 +113,10 @@
     }
 
 
-    //Validates form by calling for validation of email
+    /**
+     * Validates form by calling for validation of email & phone number.
+     * @returns {boolean} True if form is valid
+     */
     function validateForm() {
         DEBUG_LOG && console.log('> > |validateForm()| Starting validation.');
         let isValidEmail = validateEmail();
@@ -119,7 +128,6 @@
             DEBUG_LOG && console.log('|validateForm()| Validations did not pass, isValidEmail = ' + isValidEmail);
             return false;
         }
-
     }
 
     //Prevent default action for submit on form and send message with Lambda function
@@ -142,8 +150,14 @@
             return;
         }
 
+        //Create an AbortController and timeout for email fetch
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+        const sendModal = document.getElementById('sending-modal');
+
         try {
-            const sendModal = document.getElementById('sending-modal');
+
             sendModal.classList.add('set-visible');
 
             const response = await fetch(EMAIL_SERVER_URL, {
@@ -151,23 +165,35 @@
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ name, email, phone, message })
+                body: JSON.stringify({ name, email, phone, message }),
+                signal: controller.signal,
             });
 
-            const data = await response.json();
+            //Clear timeout if fetch finishes
+            clearTimeout(timeoutId);
 
-            if (response.ok) {
-                alert("📬 Your message has been sent!");
-                form.reset();
-                sendModal.classList.remove('set-visible');
-            } else {
-                console.error("❌ Email failed:", data.error);
-                alert("❌ There was a problem sending your message. Please try again later.");
-                sendModal.classList.remove('set-visible');
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status} | ${response.message}`);
             }
+
+            const data = await response.json();
+            DEBUG_LOG && console.log(`📬 Sent Email: ${data}`);
+
+            alert("✅ Your message has been sent!");
+            form.reset();
+
         } catch (error) {
-            console.error("❌ Request failed:", error);
-            alert("❌ Network error. Please check your connection and try again.");
+
+            if (error.name == 'AbortError') {
+                console.error("❌ Request timed out:", error);
+                alert(`❌ Request timed out: ${error}`);
+            } else {
+                console.error("❌ Send failed:", error);
+                alert(`❌ Send failed, please try again.\n${error}`);
+            }
+
+        } finally {
+            //Hide the modal blocking the form during send
             sendModal.classList.remove('set-visible');
         }
     });

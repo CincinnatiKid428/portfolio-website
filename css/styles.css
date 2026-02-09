@@ -679,7 +679,7 @@ html file that makes the grid item grow slightly and flash."
   height: 100vh; /* Viewport height */
   width: 100vw;   /* Viewport width */
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 100;
+  z-index: 1001; /* Stacks just on top of header & page */
   justify-content: center;
   align-items: center;
   box-sizing: border-box; /* Prevent border from adding to size */
