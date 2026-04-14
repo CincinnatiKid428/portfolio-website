@@ -186,7 +186,7 @@
 
             if (error.name == 'AbortError') {
                 console.error("❌ Request timed out:", error);
-                alert(`❌ Request timed out: ${error}`);
+                alert(`❌ Request timed out.\nPlease try again in 50 seconds to allow for cold start.\n\n${error}`);
             } else {
                 console.error("❌ Send failed:", error);
                 alert(`❌ Send failed, please try again.\n${error}`);
